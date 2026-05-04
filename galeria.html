@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pt-AO">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="description" content="Galeria fotográfica do showroom Noblelift Angola — fotos reais dos nossos equipamentos e instalações em Luanda."/>
+    <title>Galeria — Noblelift Angola</title>
+    <link href="assets/images/favicon/favicon.png" rel="icon"/>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&amp;family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap" rel="stylesheet"/>
+
+    <style>
+      .thumb-icon { font-size: 2.5rem; color: #e74d17; margin-bottom: 1rem; }
+
+      .gallery-section { padding: 70px 0; background: #f7f7f7; }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        grid-auto-rows: 220px;
+        grid-auto-flow: dense;
+        gap: 14px;
+      }
+      .gallery-item {
+        overflow: hidden;
+        border-radius: 6px;
+        position: relative;
+        cursor: zoom-in;
+        background: #ddd;
+      }
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform .35s ease;
+      }
+      .gallery-item:hover img { transform: scale(1.04); }
+      .gallery-item.tall { grid-row: span 2; }
+      .gallery-item.wide { grid-column: span 2; }
+      .gallery-item.tall img,
+      .gallery-item.wide img { height: 100%; }
+
+      .gallery-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.55) 100%);
+        opacity: 0;
+        transition: opacity .25s ease;
+        display: flex;
+        align-items: flex-end;
+        padding: 16px 18px;
+        color: #fff;
+        font-weight: 500;
+        font-size: 0.95rem;
+      }
+      .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+      /* Lightbox */
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.92);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        padding: 20px;
+      }
+      .lightbox.open { display: flex; }
+      .lightbox img {
+        max-width: 95vw;
+        max-height: 90vh;
+        object-fit: contain;
+        border-radius: 4px;
+      }
+      .lightbox-close {
+        position: absolute;
+        top: 18px;
+        right: 22px;
+        background: transparent;
+        border: 0;
+        color: #fff;
+        font-size: 2rem;
+        cursor: pointer;
+        line-height: 1;
+      }
+      .lightbox-prev, .lightbox-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255,255,255,0.12);
+        border: 0;
+        color: #fff;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        font-size: 1.4rem;
+        cursor: pointer;
+      }
+      .lightbox-prev { left: 18px; }
+      .lightbox-next { right: 18px; }
+      .lightbox-prev:hover, .lightbox-next:hover { background: rgba(255,255,255,0.25); }
+      @media (max-width: 600px) {
+        .gallery-grid { grid-auto-rows: 180px; gap: 10px; }
+      }
+    </style>
+
+    <link href="assets/css/vendor.min.css" rel="stylesheet"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="preloader">
+      <div class="loader-spinner">
+        <div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      </div>
+    </div>
+
+    <div class="wrapper clearfix" id="wrapperParallax">
+
+      <header class="header header-1" id="navbar-spy">
+        <nav class="navbar navbar-expand-lg navbar-bordered navbar-sticky" id="primary-menu">
+          <div class="container">
+            <a class="navbar-brand" href="index.html">
+              <img class="logo logo-light" src="assets/images/logo/nobelift.png" alt="Noblelift Angola" style="border-radius: 12px;" />
+              <img class="logo logo-dark" src="assets/images/logo/nobelift.png" alt="Noblelift Angola" style="border-radius: 12px;" />
+            </a>
+
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Alternar navegação">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a href="index.html"><span>Início</span></a></li>
+                <li class="nav-item"><a href="sobre.html"><span>Empresa</span></a></li>
+
+                <li class="nav-item has-dropdown">
+                  <a class="dropdown-toggle" href="produtos.html" data-toggle="dropdown"><span>Produtos</span></a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item"><a href="produtos.html#empilhadeiras"><span>Empilhadeiras Eléctricas</span></a></li>
+                    <li class="nav-item"><a href="produtos.html#porta-paletes"><span>Porta-paletes</span></a></li>
+                    <li class="nav-item"><a href="produtos.html#empilhadores"><span>Empilhadores</span></a></li>
+                    <li class="nav-item"><a href="produtos.html#mesa-elevatoria"><span>Mesa Elevatória</span></a></li>
+                    <li class="nav-item"><a href="produtos.html#plataformas"><span>Plataformas Elevatórias</span></a></li>
+                  </ul>
+                </li>
+
+                <li class="nav-item current"><a href="galeria.html"><span>Galeria</span></a></li>
+                <li class="nav-item"><a href="assets/downloads/Noblelift-Catalogo-2026.pdf" download><span>Catálogo</span></a></li>
+                <li class="nav-item"><a href="contato.html"><span>Contato</span></a></li>
+              </ul>
+
+              <div class="module-container">
+                <div class="module-contact"><a class="btn btn--primary" href="contato.html#orcamento">Orçamento</a></div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Page Title -->
+      <section class="page-title page-title-4 bg-overlay bg-overlay-dark bg-parallax" id="page-title">
+        <div class="bg-section"><img src="assets/images/real/image9.jpeg" alt="Showroom Noblelift Angola"/></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-8">
+              <div class="title text-lg-left">
+                <div class="title-sub-heading"><p>Fotos reais — sem retoques</p></div>
+                <div class="title-heading"><h1>Galeria do Showroom</h1></div>
+                <div class="clearfix"></div>
+                <ol class="breadcrumb justify-content-lg-start">
+                  <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Galeria</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section class="gallery-section">
+        <div class="container">
+          <div class="heading text-center mb-5">
+            <p class="heading-subtitle">22 fotografias do nosso showroom em Luanda</p>
+            <h2 class="heading-title">Conheça os nossos equipamentos.</h2>
+            <p>Todas as imagens são reais, tiradas no nosso showroom na Paragem da Mutamba. Clique em qualquer fotografia para ampliar.</p>
+          </div>
+
+          <div class="gallery-grid" id="galleryGrid">
+            <div class="gallery-item wide" data-src="assets/images/real/company_location_front.jpeg">
+              <img src="assets/images/real/company_location_front.jpeg" alt="Showroom Noblelift Angola — fachada" loading="lazy"/>
+              <div class="gallery-overlay">Showroom Noblelift — Paragem da Mutamba</div>
+            </div>
+            <div class="gallery-item tall" data-src="assets/images/real/image16.jpeg">
+              <img src="assets/images/real/image16.jpeg" alt="Showroom interior — vista geral" loading="lazy"/>
+              <div class="gallery-overlay">Vista geral do showroom</div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/real/image9.jpeg">
+              <img src="assets/images/real/image9.jpeg" alt="Empilhadores em exposição" loading="lazy"/>
+              <div class="gallery-overlay">Empilhadores e empilhadeiras</div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/real/image7.jpeg">
+              <img src="assets/images/real/image7.jpeg" alt="Empilhadores manuais Noblelift" loading="lazy"/>
+              <div class="gallery-overlay">Empilhadores manuais</div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/real/image11.jpeg">
+              <img src="assets/images/real/image11.jpeg" alt="Equipamentos no showroom" loading="lazy"/>
+              <div class="gallery-overlay">Equipamentos em stock</div>
+            </div>
+            <div class="gallery-item wide" data-src="assets/images/real/image1.jpeg">
+              <img src="assets/images/real/image1.jpeg" alt="Porta-paletes eléctricos EDGE" loading="lazy"/>
+              <div class="gallery-overlay">Porta-paletes eléctricos — linha EDGE</div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/real/image2.jpeg">
+              <img src="assets/images/real/image2.jpeg" alt="Porta-paletes eléctricos" loading="lazy"/>
+              <div class="gallery-overlay">Porta-paletes eléctricos</div>
+            </div>
+            <div class="gallery-item tall" data-src="assets/images/real/image3.jpeg">
+              <img src="assets/images/real/image3.jpeg" alt="Empilhadeira eléctrica G50" loading="lazy"/>
+              <div class="gallery-overlay">Empilhadeira eléctrica G50</div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/real/image4.jpeg">
+              <img src="assets/images/real/image4.jpeg" alt="Empilhadeira em operação" loading="lazy"/>
+              <div class="gallery-overlay">Empilhadeira eléctrica em operação</div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/real/image5.jpeg">
+              <img src="assets/images/real/image5.jpeg" alt="Empilhador eléctrico" loading="lazy"/>
+              <div class="gallery-overlay">Empilhador eléctrico</div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/real/image6.jpeg">
+              <img src="assets/images/real/image6.jpeg" alt="Empilhadores manuais" loading="lazy"/>
+              <div class="gallery-overlay">Empilhadores manuais</div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/real/image10.jpeg">
+              <img src="assets/images/real/image10.jpeg" alt="Porta-paletes de alta elevação" loading="lazy"/>
+              <div class="gallery-overlay">Porta-paletes de alta elevação</div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/real/image20.jpeg">
+              <img src="assets/images/real/image20.jpeg" alt="Mesa elevatória" loading="lazy"/>
+              <div class="gallery-overlay">Mesa elevatória</div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/real/image13.jpeg">
+              <img src="assets/images/real/image13.jpeg" alt="Equipamento Noblelift" loading="lazy"/>
+              <div class="gallery-overlay">Equipamento em stock</div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/real/image14.jpeg">
+              <img src="assets/images/real/image14.jpeg" alt="Equipamento Noblelift" loading="lazy"/>
+              <div class="gallery-overlay">Equipamento em stock</div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/real/image15.jpeg">
+              <img src="assets/images/real/image15.jpeg" alt="Equipamento Noblelift" loading="lazy"/>
+              <div class="gallery-overlay">Equipamento em stock</div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/real/image17.jpeg">
+              <img src="assets/images/real/image17.jpeg" alt="Equipamento Noblelift" loading="lazy"/>
+              <div class="gallery-overlay">Equipamento em stock</div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/real/image18.jpeg">
+              <img src="assets/images/real/image18.jpeg" alt="Equipamento Noblelift" loading="lazy"/>
+              <div class="gallery-overlay">Equipamento em stock</div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/real/image19.jpeg">
+              <img src="assets/images/real/image19.jpeg" alt="Equipamento Noblelift" loading="lazy"/>
+              <div class="gallery-overlay">Equipamento em stock</div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/real/image21.jpeg">
+              <img src="assets/images/real/image21.jpeg" alt="Equipamento Noblelift" loading="lazy"/>
+              <div class="gallery-overlay">Equipamento em stock</div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/real/image22.jpeg">
+              <img src="assets/images/real/image22.jpeg" alt="Equipamento Noblelift" loading="lazy"/>
+              <div class="gallery-overlay">Equipamento em stock</div>
+            </div>
+            <div class="gallery-item" data-src="assets/images/real/imae12.jpeg">
+              <img src="assets/images/real/imae12.jpeg" alt="Equipamento Noblelift" loading="lazy"/>
+              <div class="gallery-overlay">Equipamento em stock</div>
+            </div>
+          </div>
+
+          <div class="text-center mt-5">
+            <a class="btn btn--primary" href="contato.html#orcamento"><i class="fas fa-file-invoice-dollar"></i> Pedir Orçamento</a>
+            <a class="btn btn--secondary ml-2" href="assets/downloads/Noblelift-Catalogo-2026.pdf" download><i class="fas fa-download"></i> Baixar Catálogo Completo</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox" role="dialog" aria-label="Visualizador de imagens">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">&times;</button>
+        <button class="lightbox-prev" id="lightboxPrev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+        <img id="lightboxImg" src="" alt=""/>
+        <button class="lightbox-next" id="lightboxNext" aria-label="Próxima"><i class="fas fa-chevron-right"></i></button>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer footer-1">
+        <div class="footer-center">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-md-6 col-lg-3 footer-widget widget-about">
+                <div class="footer-logo mb-3">
+                  <img src="assets/images/logo/nobelift.png" alt="Noblelift Angola" style="border-radius: 12px; max-width: 160px;" />
+                </div>
+                <div class="widget-content">
+                  <p>A Noblelift Angola é representante oficial da Noblelift na distribuição de empilhadeiras, porta-paletes, mesas elevatórias e soluções logísticas em todo território nacional.</p>
+                  <div class="module module-social">
+                    <a class="share-facebook" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a class="share-instagram" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a class="share-linkedin" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-6 col-lg-2 offset-lg-1 footer-widget widget-links">
+                <div class="footer-widget-title"><h5>Produtos</h5></div>
+                <div class="widget-content">
+                  <ul>
+                    <li><a href="produtos.html#empilhadeiras">Empilhadeiras Eléctricas</a></li>
+                    <li><a href="produtos.html#porta-paletes">Porta-paletes</a></li>
+                    <li><a href="produtos.html#empilhadores">Empilhadores</a></li>
+                    <li><a href="produtos.html#mesa-elevatoria">Mesa Elevatória</a></li>
+                    <li><a href="produtos.html#plataformas">Plataformas</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-6 col-lg-3 footer-widget widget-links">
+                <div class="footer-widget-title"><h5>Site</h5></div>
+                <div class="widget-content">
+                  <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Empresa</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="assets/downloads/Noblelift-Catalogo-2026.pdf" download>Catálogo 2026</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-6 col-lg-3 footer-widget widget-contact">
+                <div class="footer-widget-title"><h5>Contato</h5></div>
+                <div class="widget-content">
+                  <p>Tem dúvidas ou precisa de ajuda? Fale com a nossa equipa.</p>
+                  <ul>
+                    <li class="phone"><a href="tel:+244928283666"><i class="fas fa-phone-alt"></i> +244 928 283 666</a></li>
+                    <li class="address"><a href="https://maps.google.com/?q=Paragem+da+Mutamba,+Luanda,+Angola" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt"></i> Paragem da Mutamba, via expresse, Luanda – Angola</a></li>
+                    <li class="email"><a href="mailto:txtailai@yeah.net"><i class="fas fa-envelope"></i> txtailai@yeah.net</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-md-12 text--center footer-copyright">
+              <div class="copyright"><span>&copy; 2026 Noblelift Angola. Todos os direitos reservados.</span></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="backtop" id="back-to-top"><i class="fas fa-chevron-up"></i></div>
+    </div>
+
+    <script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/vendor.min.js"></script>
+    <script src="assets/js/functions.js"></script>
+
+    <script>
+      (function() {
+        const items = Array.from(document.querySelectorAll('.gallery-item'));
+        const lightbox = document.getElementById('lightbox');
+        const img = document.getElementById('lightboxImg');
+        const close = document.getElementById('lightboxClose');
+        const prev = document.getElementById('lightboxPrev');
+        const next = document.getElementById('lightboxNext');
+        let idx = 0;
+
+        function open(i) {
+          idx = (i + items.length) % items.length;
+          img.src = items[idx].getAttribute('data-src');
+          img.alt = items[idx].querySelector('img').alt;
+          lightbox.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        }
+        function shut() {
+          lightbox.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+
+        items.forEach((el, i) => el.addEventListener('click', () => open(i)));
+        close.addEventListener('click', shut);
+        prev.addEventListener('click', (e) => { e.stopPropagation(); open(idx - 1); });
+        next.addEventListener('click', (e) => { e.stopPropagation(); open(idx + 1); });
+        lightbox.addEventListener('click', (e) => { if (e.target === lightbox) shut(); });
+        document.addEventListener('keydown', (e) => {
+          if (!lightbox.classList.contains('open')) return;
+          if (e.key === 'Escape') shut();
+          if (e.key === 'ArrowLeft') open(idx - 1);
+          if (e.key === 'ArrowRight') open(idx + 1);
+        });
+      })();
+    </script>
+  </body>
+</html>

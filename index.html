@@ -1,1091 +1,576 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en-US">
-  
-<!-- Mirrored from demo.zytheme.com/equita/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Jul 2025 15:10:08 GMT -->
+<html dir="ltr" lang="pt-AO">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="author" content="Ayman Fikry"/>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="description" content="Representante oficial da Noblelift em Angola – Soluções de movimentação de cargas, empilhadeiras e equipamentos logísticos."/>
-<title>Noblelift Angola – Soluções em Movimentação de Cargas</title>
+    <meta name="description" content="Representante oficial da Noblelift em Angola – Empilhadeiras, porta-paletes, empilhadores, mesas elevatórias e plataformas. Showroom em Luanda."/>
+    <title>Noblelift Angola – Soluções em Movimentação de Cargas</title>
 
     <link href="assets/images/favicon/favicon.png" rel="icon"/>
 
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!--  Fonts ==
-    -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.gstatic.com/"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&amp;family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap" rel="stylesheet"/>
-    <!--  Stylesheets==
-    -->
 
     <style>
-      .thumb-icon {
-  font-size: 2.5rem;
-  color: #e74d17; /* Or your brand red */
-  margin-bottom: 1rem;
-}
-.services-bar-card:hover .thumb-icon {
-  color: #000; /* On hover, if you want contrast */
-}
+      .thumb-icon { font-size: 2.5rem; color: #e74d17; margin-bottom: 1rem; }
+      .services-bar-card:hover .thumb-icon { color: #000; }
+      .icon, .feature-icon i, .icon-panel i { font-size: 2.2rem; color: #e74d17; margin-bottom: 0.75rem; }
+      .feature-panel:hover i { color: #111; }
 
+      .image-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+      .image-strip a { position: relative; display: block; aspect-ratio: 4/3; overflow: hidden; }
+      .image-strip img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s ease; }
+      .image-strip a:hover img { transform: scale(1.06); }
+      .image-strip .label {
+        position: absolute; inset: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(0,0,0,0.78) 100%);
+        display: flex; align-items: flex-end; padding: 18px 22px;
+        color: #fff; font-weight: 600; font-size: 1.05rem; letter-spacing: .3px;
+      }
+      .image-strip .label i { color: #e74d17; margin-right: 8px; font-size: 1rem; }
+      @media (max-width: 768px) {
+        .image-strip { grid-template-columns: repeat(2, 1fr); }
+      }
 
-.icon, .feature-icon i, .icon-panel i {
-  font-size: 2.2rem;
-  color: #e74d17; /* Noblelift Red */
-  margin-bottom: 0.75rem;
-}
-.feature-panel:hover i {
-  color: #111; /* or #f00 for interactive feel */
-}
-
-
+      /* Override the template's 440px top padding so the image strip flows into Features */
+      #features-1.features { padding-top: 80px; padding-bottom: 0; }
+      /* Strip should be flush with the surrounding sections */
+      .image-strip { margin: 0; padding: 0; }
+      .image-strip + .cta { padding-top: 0; }
     </style>
+
     <link href="assets/css/vendor.min.css" rel="stylesheet"/>
     <link href="assets/css/style.css" rel="stylesheet"/>
-  <script data-cfasync="false" nonce="dd495e1d-5c22-4652-bef1-fe9d9951b5c7">try{(function(w,d){!function(fv,fw,fx,fy){if(fv.zaraz)console.error("zaraz is loaded twice");else{fv[fx]=fv[fx]||{};fv[fx].executed=[];fv.zaraz={deferred:[],listeners:[]};fv.zaraz._v="5858";fv.zaraz._n="dd495e1d-5c22-4652-bef1-fe9d9951b5c7";fv.zaraz.q=[];fv.zaraz._f=function(fz){return async function(){var fA=Array.prototype.slice.call(arguments);fv.zaraz.q.push({m:fz,a:fA})}};for(const fB of["track","set","debug"])fv.zaraz[fB]=fv.zaraz._f(fB);fv.zaraz.init=()=>{var fC=fw.getElementsByTagName(fy)[0],fD=fw.createElement(fy),fE=fw.getElementsByTagName("title")[0];fE&&(fv[fx].t=fw.getElementsByTagName("title")[0].text);fv[fx].x=Math.random();fv[fx].w=fv.screen.width;fv[fx].h=fv.screen.height;fv[fx].j=fv.innerHeight;fv[fx].e=fv.innerWidth;fv[fx].l=fv.location.href;fv[fx].r=fw.referrer;fv[fx].k=fv.screen.colorDepth;fv[fx].n=fw.characterSet;fv[fx].o=(new Date).getTimezoneOffset();if(fv.dataLayer)for(const fF of Object.entries(Object.entries(dataLayer).reduce(((fG,fH)=>({...fG[1],...fH[1]})),{})))zaraz.set(fF[0],fF[1],{scope:"page"});fv[fx].q=[];for(;fv.zaraz.q.length;){const fI=fv.zaraz.q.shift();fv[fx].q.push(fI)}fD.defer=!0;for(const fJ of[localStorage,sessionStorage])Object.keys(fJ||{}).filter((fL=>fL.startsWith("_zaraz_"))).forEach((fK=>{try{fv[fx]["z_"+fK.slice(7)]=JSON.parse(fJ.getItem(fK))}catch{fv[fx]["z_"+fK.slice(7)]=fJ.getItem(fK)}}));fD.referrerPolicy="origin";fD.src="../cdn-cgi/zaraz/sd0d9.js?z="+btoa(encodeURIComponent(JSON.stringify(fv[fx])));fC.parentNode.insertBefore(fD,fC)};["complete","interactive"].includes(fw.readyState)?zaraz.init():fv.addEventListener("DOMContentLoaded",zaraz.init)}}(w,d,"zarazData","script");window.zaraz._p=async eC=>new Promise((eD=>{if(eC){eC.e&&eC.e.forEach((eE=>{try{const eF=d.querySelector("script[nonce]"),eG=eF?.nonce||eF?.getAttribute("nonce"),eH=d.createElement("script");eG&&(eH.nonce=eG);eH.innerHTML=eE;eH.onload=()=>{d.head.removeChild(eH)};d.head.appendChild(eH)}catch(eI){console.error(`Error executing script: ${eE}\n`,eI)}}));Promise.allSettled((eC.f||[]).map((eJ=>fetch(eJ[0],eJ[1]))))}eD()}));zaraz._p({"e":["(function(w,d){})(window,document)"]});})(window,document)}catch(e){throw fetch("/cdn-cgi/zaraz/t"),e;};</script></head>
-  <body>
+</head>
+<body>
     <div class="preloader">
       <div class="loader-spinner">
-        <div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+        <div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
       </div>
     </div>
-    <!-- Document Wrapper-->
+
     <div class="wrapper clearfix" id="wrapperParallax">
-      <!-- Start .header-1-->
-   <header class="header header-1 header-transparent" id="navbar-spy">
-  <nav class="navbar navbar-expand-lg navbar-bordered navbar-sticky" id="primary-menu">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-       <img class="logo logo-light" src="assets/images/logo/nobelift.png" alt="Noblelift Angola Logo" style="border-radius: 12px;" />
-<img class="logo logo-dark" src="assets/images/logo/nobelift.png" alt="Noblelift Angola Logo" style="border-radius: 12px;" />
 
-      </a>
+      <header class="header header-1 header-transparent" id="navbar-spy">
+        <nav class="navbar navbar-expand-lg navbar-bordered navbar-sticky" id="primary-menu">
+          <div class="container">
+            <a class="navbar-brand" href="index.html">
+              <img class="logo logo-light" src="assets/images/logo/nobelift.png" alt="Noblelift Angola" style="border-radius: 12px;" />
+              <img class="logo logo-dark" src="assets/images/logo/nobelift.png" alt="Noblelift Angola" style="border-radius: 12px;" />
+            </a>
 
-      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Alternar navegação">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Alternar navegação">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-      <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item has-dropdown active">
-            <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span>Início</span></a>
-            <ul class="dropdown-menu">
-              <li class="nav-item current"><a href="index.html"><span>Página Principal</span></a></li>
-              <li class="nav-item"><a href="#"><span>Moderno</span></a></li>
-              <li class="nav-item"><a href="#"><span>Clássico</span></a></li>
-            </ul>
-          </li>
+            <div class="collapse navbar-collapse" id="navbarContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item current"><a href="index.html"><span>Início</span></a></li>
+                <li class="nav-item"><a href="sobre.html"><span>Empresa</span></a></li>
 
-          <li class="nav-item has-dropdown">
-            <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span>Empresa</span></a>
-            <ul class="dropdown-menu">
-              <li class="nav-item"><a href="#"><span>Quem Somos</span></a></li>
-              <li class="nav-item"><a href="#"><span>Valores</span></a></li>
-              <li class="nav-item"><a href="#"><span>Equipe de Gestão</span></a></li>
-              <li class="nav-item"><a href="#"><span>Localizações</span></a></li>
-              <li class="nav-item"><a href="#"><span>Galeria</span></a></li>
-              <li class="nav-item"><a href="#"><span>Reconhecimentos</span></a></li>
-              <li class="nav-item"><a href="#"><span>Carreiras</span></a></li>
-            </ul>
-          </li>
+                <li class="nav-item has-dropdown">
+                  <a class="dropdown-toggle" href="produtos.html" data-toggle="dropdown"><span>Produtos</span></a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item"><a href="produtos.html#empilhadeiras"><span>Empilhadeiras Eléctricas</span></a></li>
+                    <li class="nav-item"><a href="produtos.html#porta-paletes"><span>Porta-paletes</span></a></li>
+                    <li class="nav-item"><a href="produtos.html#empilhadores"><span>Empilhadores</span></a></li>
+                    <li class="nav-item"><a href="produtos.html#mesa-elevatoria"><span>Mesa Elevatória</span></a></li>
+                    <li class="nav-item"><a href="produtos.html#plataformas"><span>Plataformas Elevatórias</span></a></li>
+                  </ul>
+                </li>
 
-          <li class="nav-item has-dropdown mega-dropdown">
-            <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span>Produtos</span></a>
-            <ul class="dropdown-menu">
-              <li>
-                <div class="row">
-                  <div class="col col-md-6">
-                    <h5 class="menu-head">Equipamentos</h5>
-                    <ul>
-                      <li class="nav-item"><a href="#"><span>Armazenamento</span></a></li>
-                      <li class="nav-item"><a href="#"><span>Empilhadeiras Eléctricas</span></a></li>
-                      <li class="nav-item"><a href="#"><span>Porta-paletes</span></a></li>
-                      <li class="nav-item"><a href="#"><span>Mesa Elevatória</span></a></li>
-                      <li class="nav-item"><a href="#"><span>AGV & Automação</span></a></li>
-                      <li class="nav-item"><a href="#"><span>Embalagem e Logística</span></a></li>
-                    </ul>
-                  </div>
-                  <div class="col col-md-6">
-                    <h5 class="menu-head">Soluções por Setor</h5>
-                    <ul>
-                      <li class="nav-item"><a href="#"><span>Varejo & Consumo</span></a></li>
-                      <li class="nav-item"><a href="#"><span>Indústria & Saúde</span></a></li>
-                      <li class="nav-item"><a href="#"><span>Químico & Industrial</span></a></li>
-                      <li class="nav-item"><a href="#"><span>Energia & Serviços</span></a></li>
-                      <li class="nav-item"><a href="#"><span>Alimentos & Bebidas</span></a></li>
-                      <li class="nav-item"><a href="#"><span>Petróleo & Gás</span></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </li>
-
-          <li class="nav-item has-dropdown">
-            <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span>Notícias</span></a>
-            <ul class="dropdown-menu">
-              <li class="nav-item"><a href="#"><span>Blog</span></a></li>
-              <li class="nav-item"><a href="#"><span>Postagem Individual</span></a></li>
-              <li class="nav-item"><a href="#"><span>Nossos Serviços</span></a></li>
-              <li class="nav-item"><a href="#"><span>Casos de Sucesso</span></a></li>
-              <li class="nav-item"><a href="#"><span>Estudos de Caso</span></a></li>
-              <li class="nav-item"><a href="#"><span>Estudo Detalhado</span></a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item has-dropdown">
-            <a class="dropdown-toggle" href="#" data-toggle="dropdown"><span>Funcionalidades</span></a>
-            <ul class="dropdown-menu">
-              <li class="nav-item"><a href="#"><span>Orçamento</span></a></li>
-              <li class="nav-item"><a href="#"><span>Rastrear Pedido</span></a></li>
-              <li class="nav-item"><a href="#"><span>Encontre-nos</span></a></li>
-              <li class="nav-item"><a href="#"><span>Ajuda & FAQ</span></a></li>
-            </ul>
-          </li>
-
-          <li class="nav-item"><a href="#"><span>Contato</span></a></li>
-        </ul>
-
-        <div class="module-container">
-          <!-- Módulo de Pesquisa -->
-          <div class="module module-search float-left">
-            <div class="module-icon search-icon"><i class="icon-search"></i><span class="title">Pesquisar</span></div>
-            <div class="module-content module-fullscreen module-search-box">
-              <div class="pos-vertical-center">
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
-                      <form class="form-search">
-                        <input class="form-control" type="text" placeholder="Digite e pressione Enter"/>
-                        <button></button>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div><a class="module-cancel" href="javascript:void(0)"><i class="fas fa-times"></i></a>
-            </div>
-          </div>
-
-          <!-- Botão Orçamento -->
-          <div class="module-contact"><a class="btn btn--primary" href="#">Orçamentos</a></div>
-
-          <!-- Idiomas -->
-          <div class="module module-language">
-            <div class="selected"><span>PT </span><i class="fas fa-chevron-down"></i></div>
-            <div class="lang-list">
-              <ul>
-                <li><a href="javascript:void(0)">Português</a></li>
-                <li><a href="javascript:void(0)">English</a></li>
+                <li class="nav-item"><a href="galeria.html"><span>Galeria</span></a></li>
+                <li class="nav-item"><a href="assets/downloads/Noblelift-Catalogo-2026.pdf" download><span>Catálogo</span></a></li>
+                <li class="nav-item"><a href="contato.html"><span>Contato</span></a></li>
               </ul>
+
+              <div class="module-container">
+                <div class="module-contact"><a class="btn btn--primary" href="contato.html#orcamento">Orçamento</a></div>
+              </div>
             </div>
           </div>
-        </div>
+        </nav>
+      </header>
 
-      </div>
-    </div>
-  </nav>
-</header>
+      <!-- Hero Slider -->
+      <section class="slider slider-1" id="slider-1">
+        <div class="container-fluid pr-0 pl-0">
+          <div class="carousel owl-carousel custom-carousel carousel-navs carousel-dots"
+            data-slide="1" data-slide-rs="1" data-autoplay="true" data-nav="true" data-dots="true"
+            data-space="0" data-loop="true" data-speed="800" data-slider-id="#custom-carousel">
 
-      <!--
-      ============================
-      Slider #1 Section
-      ============================
-      -->
-<section class="slider slider-1" id="slider-1">
-  <div class="container-fluid pr-0 pl-0">
-    <div class="carousel owl-carousel custom-carousel carousel-navs carousel-dots"
-      data-slide="1" data-slide-rs="1" data-autoplay="false" data-nav="true" data-dots="true"
-      data-space="0" data-loop="true" data-speed="800" data-slider-id="#custom-carousel">
-
-      <!-- Slide 1 -->
-      <div class="slide d-flex align-items-center bg-overlay bg-overlay-dark">
-        <div class="bg-section"><img src="assets/images/sliders/1.webp" alt="Background"/></div>
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-lg-7">
-              <div class="slide-content">
-                <h1 class="slide-headline">Soluções completas<br/>para movimentação de cargas!</h1>
-                <p class="slide-desc">Oferecemos equipamentos Noblelift com suporte local em Angola para otimizar sua logística e operações.</p>
-                <div class="slide-buttons">
-                  <a class="btn btn--primary" href="#">Sobre Nós</a>
-                  <a class="btn btn--white" href="#">Nossos Produtos</a>
+            <div class="slide d-flex align-items-center bg-overlay bg-overlay-dark">
+              <div class="bg-section"><img src="assets/images/real/image16.jpeg" alt="Showroom Noblelift Angola"/></div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 col-lg-7">
+                    <div class="slide-content">
+                      <h1 class="slide-headline">Soluções completas<br/>para movimentação de cargas!</h1>
+                      <p class="slide-desc">Representante oficial Noblelift em Angola. Empilhadeiras, porta-paletes e equipamentos logísticos com suporte local.</p>
+                      <div class="slide-buttons">
+                        <a class="btn btn--primary" href="produtos.html">Nossos Produtos</a>
+                        <a class="btn btn--white" href="sobre.html">Sobre Nós</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Slide 2 -->
-      <div class="slide d-flex align-items-center bg-overlay bg-overlay-dark">
-        <div class="bg-section"><img src="assets/images/sliders/2.webp" alt="Background"/></div>
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-lg-7">
-              <div class="slide-content">
-                <p class="slide-subheadline">Desempenho Elevado com Precisão</p>
-                <h2 class="slide-headline">Empilhamento rápido,<br/>seguro e sustentável!</h2>
-                <p class="slide-desc">Descubra a nova geração de empilhadeiras eléctricas Noblelift disponíveis em Angola.</p>
-                <div class="slide-buttons">
-                  <a class="btn btn--primary" href="#">Sobre Nós</a>
-                  <a class="btn btn--white" href="#">Ver Equipamentos</a>
+            <div class="slide d-flex align-items-center bg-overlay bg-overlay-dark">
+              <div class="bg-section"><img src="assets/images/real/image13.jpeg" alt="Vista panorâmica do showroom Noblelift Angola"/></div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 col-lg-7">
+                    <div class="slide-content">
+                      <p class="slide-subheadline">Desempenho elevado com precisão</p>
+                      <h2 class="slide-headline">Empilhadeiras eléctricas<br/>rápidas, seguras e sustentáveis!</h2>
+                      <p class="slide-desc">Conheça a nova geração de empilhadeiras eléctricas Noblelift, disponíveis no nosso showroom em Luanda.</p>
+                      <div class="slide-buttons">
+                        <a class="btn btn--primary" href="produtos.html#empilhadeiras">Ver Empilhadeiras</a>
+                        <a class="btn btn--white" href="contato.html#orcamento">Pedir Orçamento</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Slide 3 -->
-      <div class="slide d-flex align-items-center bg-overlay bg-overlay-dark">
-        <div class="bg-section"><img src="assets/images/sliders/3.webp" alt="Background"/></div>
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-lg-7">
-              <div class="slide-content">
-                <p class="slide-subheadline">Soluções de Elevação Inteligentes</p>
-                <h2 class="slide-headline">Tecnologia de ponta<br/>para o seu armazém!</h2>
-                <p class="slide-desc">Mesa elevatória, porta-paletes e muito mais — projetado para máxima eficiência e segurança.</p>
-                <div class="slide-buttons">
-                  <a class="btn btn--primary" href="#">Sobre Nós</a>
-                  <a class="btn btn--white" href="#">Ver Produtos</a>
+            <div class="slide d-flex align-items-center bg-overlay bg-overlay-dark">
+              <div class="bg-section"><img src="assets/images/real/company_location_front.jpeg" alt="Showroom Noblelift Angola — Paragem da Mutamba, Luanda"/></div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 col-lg-7">
+                    <div class="slide-content">
+                      <p class="slide-subheadline">Visite o nosso showroom</p>
+                      <h2 class="slide-headline">Equipamentos prontos<br/>para entrega em Luanda!</h2>
+                      <p class="slide-desc">Paragem da Mutamba, via expresse — venha conhecer o nosso stock completo Noblelift.</p>
+                      <div class="slide-buttons">
+                        <a class="btn btn--primary" href="contato.html">Como Chegar</a>
+                        <a class="btn btn--white" href="assets/downloads/Noblelift-Catalogo-2026.pdf" download>Baixar Catálogo</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
-      </div>
+      </section>
 
-   
+      <!-- Services Bar -->
+      <section class="services-bar" id="servicesBar">
+        <div class="container">
+          <div class="row no-gutters">
 
-    </div>
-  </div>
-</section>
-
-      <!--
-      ============================
-      Services Bar Section
-      ============================
-      -->
-<section class="services-bar" id="servicesBar"> 
-  <div class="container">
-    <div class="row no-gutters">
-      
-      <div class="col-12 col-md-6 col-lg-3 services-bar-card active">
-        <i class="thumb-icon fas fa-warehouse"></i>
-        <div class="thumb-body"> 
-          <p>sustentável</p>
-          <h3><a href="#">Soluções de Armazenamento</a></h3>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-3 services-bar-card">
-        <i class="thumb-icon fas fa-dolly"></i>
-        <div class="thumb-body"> 
-          <p>confiável</p>
-          <h3><a href="#">Empilhadeiras Eléctricas</a></h3>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-3 services-bar-card">
-        <i class="thumb-icon fas fa-boxes-stacked"></i>
-        <div class="thumb-body"> 
-          <p>inovador</p>
-          <h3><a href="#">Porta-paletes & Elevadores</a></h3>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-3 services-bar-card">
-        <i class="thumb-icon fas fa-robot"></i>
-        <div class="thumb-body"> 
-          <p>versátil</p>
-          <h3><a href="#">Automação & AGV</a></h3>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-      <!--
-      ============================
-      About #1 Section
-      ============================
-      -->
-<section class="about pt-70" id="about-1">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-12 col-lg-5">
-        <div class="about-img about-img-left">
-          <div class="about-img-warp bg-overlay">
-            <div class="bg-section">
-              <img src="assets/images/about/1.jpg" alt="Imagem sobre nós"/>
-            </div>
-          </div>
-          <div class="counter">
-            <div class="counter-icon">
-              <i class="flaticon-018-packaging"></i>
-            </div>
-            <div class="counter-num">
-              <span class="counting">9,612</span>
-              <p>m</p>
-            </div>
-            <div class="counter-name">
-              <h6>Equipamentos entregues</h6>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12 col-lg-7">
-        <div class="heading heading-3">
-          <p class="heading-subtitle">Distribuidor Oficial em Angola de Soluções Noblelift.</p>
-          <h2 class="heading-title">Soluções de Movimentação Fiáveis e Eficientes para o Seu Negócio!</h2>
-        </div>
-
-        <div class="about-block">
-          <div class="row">
-            <div class="col-12 col-lg-7">
-              <div class="block-left">
-                <p>A Noblelift Angola representa oficialmente uma das maiores fabricantes mundiais de empilhadeiras e equipamentos de movimentação de cargas, oferecendo soluções inovadoras adaptadas ao mercado angolano.</p>
-                <p>Orgulhamo-nos em fornecer equipamentos com tecnologia de ponta, assistência técnica local e formação contínua para garantir a máxima eficiência nas operações logísticas dos nossos clientes.</p>
+            <div class="col-12 col-md-6 col-lg-3 services-bar-card active">
+              <i class="thumb-icon fas fa-truck-loading"></i>
+              <div class="thumb-body">
+                <p>eléctricas</p>
+                <h3><a href="produtos.html#empilhadeiras">Empilhadeiras</a></h3>
               </div>
             </div>
+
+            <div class="col-12 col-md-6 col-lg-3 services-bar-card">
+              <i class="thumb-icon fas fa-dolly"></i>
+              <div class="thumb-body">
+                <p>manuais e eléctricos</p>
+                <h3><a href="produtos.html#porta-paletes">Porta-paletes</a></h3>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3 services-bar-card">
+              <i class="thumb-icon fas fa-boxes-stacked"></i>
+              <div class="thumb-body">
+                <p>compactos e robustos</p>
+                <h3><a href="produtos.html#empilhadores">Empilhadores</a></h3>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3 services-bar-card">
+              <i class="thumb-icon fas fa-arrows-up-down"></i>
+              <div class="thumb-body">
+                <p>alta elevação</p>
+                <h3><a href="produtos.html#mesa-elevatoria">Mesa Elevatória</a></h3>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="about pt-70" id="about-1">
+        <div class="container">
+          <div class="row">
+
             <div class="col-12 col-lg-5">
-              <div class="block-right">
-                <div class="detail">
-                  <h6>qualidade</h6>
-                  <p>Produtos certificados internacionalmente e adaptados às necessidades do mercado africano.</p>
-                </div>
-                <div class="detail">
-                  <h6>confiabilidade</h6>
-                  <p>Garantia de performance e suporte local em todas as fases de operação.</p>
+              <div class="about-img about-img-left">
+                <div class="about-img-warp bg-overlay">
+                  <div class="bg-section">
+                    <img src="assets/images/real/company_location_front.jpeg" alt="Showroom Noblelift Angola"/>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        <div class="signature-block">
-          <div class="signature-body">
-            <h6>Direção Geral</h6>
-            <p>Noblelift Angola</p>
-          </div>
-          <img src="assets/images/signature/1.png" alt="assinatura"/>
-        </div>
-      </div>
+            <div class="col-12 col-lg-7">
+              <div class="heading heading-3">
+                <p class="heading-subtitle">Distribuidor Oficial em Angola de Soluções Noblelift.</p>
+                <h2 class="heading-title">Soluções de movimentação fiáveis e eficientes para o seu negócio.</h2>
+              </div>
 
-    </div>
-  </div>
-</section>
-
-      <!--
-      ============================
-      CTA #1 Section
-      ============================
-      -->
-<section class="cta bg-overlay bg-overlay-dark2" id="cta-1">
-  <div class="bg-section">
-    <img src="assets/images/cta/1.jpg" alt="imagem de fundo"/>
-  </div>
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-12 col-lg-6">
-        <div class="heading heading-2 heading-light">
-          <p class="heading-subtitle">Porque escolher a Noblelift?</p>
-          <h2 class="heading-title">Soluções logísticas inteligentes, acessíveis e prontas para o futuro.</h2>
-        </div>
-      </div>
-
-      <div class="col-12 col-lg-6">
-        <div class="icon-set">
-          <div class="icon-panel">
-            <i class="fas fa-money-check-alt"></i><span>preços transparentes</span>
-          </div>
-          <div class="icon-panel">
-            <i class="fas fa-shipping-fast"></i><span>entrega rápida e eficiente</span>
-          </div>
-          <div class="icon-panel">
-            <i class="fas fa-warehouse"></i><span>armazenamento industrial</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-12"> 
-        <div class="contact-panel">
-          <div class="contact-types">
-            <a class="button quote-btn" href="javascript:void(0)" data-form="quoteFormActive">
-              <i class="fas fa-file-invoice-dollar"></i><span>solicitar orçamento</span>
-            </a>
-            <a class="button track-btn active" href="javascript:void(0)" data-form="trackFormActive">
-              <i class="fas fa-box"></i><span>rastrear pedido</span>
-            </a>
-          </div>
-
-          <div class="contact-card">
-            <div class="contact-body trackFormActive">
-              <div class="row">
-                <div class="col-12 col-lg-8"> 
-                  <!-- Quote Form -->
-                  <form class="contactForm quote-form mb-0" method="post" action="#">
-                    <h5 class="card-heading">Dados Pessoais</h5>
-                    <div class="row">
-                      <div class="col-12 col-md-12 col-lg-4">
-                        <input class="form-control" type="text" name="contact-name" placeholder="Nome" required=""/>
-                      </div>
-                      <div class="col-12 col-md-6 col-lg-4">
-                        <input class="form-control" type="email" name="contact-email" placeholder="Email" required=""/>
-                      </div>
-                      <div class="col-12 col-md-6 col-lg-4">
-                        <input class="form-control" type="text" name="contact-phone" placeholder="Telefone" required=""/>
-                      </div>
+              <div class="about-block">
+                <div class="row">
+                  <div class="col-12 col-lg-7">
+                    <div class="block-left">
+                      <p>A Noblelift Angola representa oficialmente um dos maiores fabricantes mundiais de empilhadeiras e equipamentos de movimentação de cargas, oferecendo soluções adaptadas ao mercado angolano.</p>
+                      <p>Trabalhamos com tecnologia de ponta, assistência técnica local e formação contínua, para garantir máxima eficiência nas operações logísticas dos nossos clientes.</p>
                     </div>
-
-                    <h5 class="card-heading">Informações do Envio</h5>
-                    <div class="row">
-                      <div class="col-12 col-lg-4">
-                        <div class="select-container">
-                          <select class="form-control">
-                            <option value="default">Tipo de Carga</option>
-                            <option value="equip">Equipamento</option>
-                            <option value="pecas">Peças & Acessórios</option>
-                          </select>
-                        </div>
+                  </div>
+                  <div class="col-12 col-lg-5">
+                    <div class="block-right">
+                      <div class="detail">
+                        <h6>qualidade</h6>
+                        <p>Produtos certificados internacionalmente e adaptados às condições do mercado africano.</p>
                       </div>
-                      <div class="col-12 col-md-6 col-lg-4">
-                        <input class="form-control" type="text" name="contact-city" placeholder="Cidade de Origem" required=""/>
+                      <div class="detail">
+                        <h6>confiabilidade</h6>
+                        <p>Garantia de performance, suporte local e peças de origem em todas as fases de operação.</p>
                       </div>
-                      <div class="col-12 col-md-6 col-lg-4">
-                        <input class="form-control" type="text" name="contact-destination" placeholder="Cidade de Entrega" required=""/>
-                      </div>
-                      <div class="col-12 col-lg-4">
-                        <div class="select-container">
-                          <select class="form-control">
-                            <option value="default">Incoterms</option>
-                            <option value="ddp">DDP</option>
-                            <option value="fob">FOB</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-12 col-md-2"><input class="form-control" type="text" name="contact-weight" placeholder="Peso" required=""/></div>
-                      <div class="col-12 col-md-2"><input class="form-control" type="text" name="contact-height" placeholder="Altura" required=""/></div>
-                      <div class="col-12 col-md-2"><input class="form-control" type="text" name="contact-width" placeholder="Largura" required=""/></div>
-                      <div class="col-12 col-md-2"><input class="form-control" type="text" name="contact-length" placeholder="Comprimento" required=""/></div>
-
-                      <div class="col-12">
-                        <div class="custom-radio-group">
-                          <div class="custom-control custom-radio custom-control-inline">
-                            <input class="custom-control-input" type="radio" id="fragile1" name="opcaoExtra"/>
-                            <label for="fragile1">frágil</label>
-                          </div>
-                          <div class="custom-control custom-radio custom-control-inline">
-                            <input class="custom-control-input" type="radio" id="express1" name="opcaoExtra"/>
-                            <label for="express1">entrega expressa</label>
-                          </div>
-                          <div class="custom-control custom-radio custom-control-inline">
-                            <input class="custom-control-input" type="radio" id="insurance1" name="opcaoExtra"/>
-                            <label for="insurance1">seguro</label>
-                          </div>
-                          <div class="custom-control custom-radio custom-control-inline">
-                            <input class="custom-control-input" type="radio" id="packaging1" name="opcaoExtra"/>
-                            <label for="packaging1">embalagem</label>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-12">
-                        <input class="btn btn--secondary btn--block" type="submit" value="Solicitar Orçamento"/>
-                      </div>
-                      <div class="col-12"><div class="contact-result"></div></div>
-                    </div>
-                  </form>
-
-                  <!-- Tracking Form -->
-                  <form class="contactForm track-form mb-0" method="post" action="#">
-                    <h5 class="card-heading">Tipo de Envio</h5>
-                    <div class="row">
-                      <div class="col-12">
-                        <div class="select-container">
-                          <select class="form-control">
-                            <option value="default">Selecione o Tipo</option>
-                            <option value="eq">Equipamento</option>
-                            <option value="pc">Peças</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-
-                    <h5 class="card-heading">Número de Rastreamento</h5>
-                    <div class="row">
-                      <div class="col-12">
-                        <textarea class="form-control" name="contact-tracking-number" cols="30" rows="2" placeholder="Insira até 10 números de rastreamento" required=""></textarea>
-                      </div>
-                      <div class="col-12">
-                        <div class="custom-radio-group">
-                          <div class="custom-control custom-radio custom-control-inline">
-                            <input class="custom-control-input" type="radio" id="fragile2" name="opcaoExtra2"/>
-                            <label for="fragile2">frágil</label>
-                          </div>
-                          <div class="custom-control custom-radio custom-control-inline">
-                            <input class="custom-control-input" type="radio" id="express2" name="opcaoExtra2"/>
-                            <label for="express2">entrega expressa</label>
-                          </div>
-                          <div class="custom-control custom-radio custom-control-inline">
-                            <input class="custom-control-input" type="radio" id="insurance2" name="opcaoExtra2"/>
-                            <label for="insurance2">seguro</label>
-                          </div>
-                          <div class="custom-control custom-radio custom-control-inline">
-                            <input class="custom-control-input" type="radio" id="packaging2" name="opcaoExtra2"/>
-                            <label for="packaging2">embalagem</label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <input class="btn btn--secondary btn--block" type="submit" value="Rastrear Envio"/>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-
-                <div class="col-12 col-lg-4">
-                  <div class="apply-card widget widget-reservation">
-                    <img src="assets/images/contact/1.jpg" alt="Imagem fundo"/>
-                    <div class="widget-content">
-                      <h5>Junte-se à nossa equipa</h5>
-                      <p>Procuramos talentos para transformar a logística em Angola com soluções Noblelift. Envie sua candidatura hoje mesmo.</p>
-                      <a class="btn btn--white" href="#">
-                        <i class="fas fa-arrow-right"></i>candidatar-se
-                      </a>
                     </div>
                   </div>
                 </div>
-
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-    </div>
-  </div>
-</section>
-
-
- 
-<section class="features bg-gray" id="features-1">
-  <div class="container">
-    <div class="heading heading-4">
-      <div class="row">
-        <div class="col-12 col-lg-6">
-          <p class="heading-subtitle">Equipamentos Seguros e Fiáveis!</p>
-          <h2 class="heading-title">Gerindo soluções logísticas para grandes empresas em Angola.</h2>
-        </div>
-        <div class="col-12 col-lg-6">
-          <p class="heading-desc">A nossa experiência em movimentação de cargas, aliada à tecnologia de ponta Noblelift, permite oferecer soluções adaptadas às necessidades da indústria angolana, com suporte local e eficiência internacional.</p>
-          <div class="actions-container">
-            <a class="btn btn-transparent" href="javascript:void(0)">Planos e Orçamentos</a>
-            <div class="employee-info">
-              <div class="employee-img">
-                <img src="assets/images/testimonial/5.jpg" alt="imagem"/>
-              </div>
-              <div class="employee-body">
-                <h6>+244 923 000 000</h6>
-                <p>Representante Comercial</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-6 col-md-6 col-lg-4">
-        <div class="feature-panel bg-white">
-          <div class="feature-icon"><i class="fas fa-dolly"></i></div>
-          <div class="feature-content">
-            <i class="fas fa-dolly"></i>
-            <h4>Empilhadeiras<br/>Eléctricas</h4>
-            <p>Soluções eficientes e ecológicas para manuseio de cargas, com tecnologia de baterias de lítio e autonomia prolongada.</p>
-            <a href="javascript:void(0)"><i class="icon-arrow-right"></i> saiba mais</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-6 col-lg-4">
-        <div class="feature-panel bg-white">
-          <div class="feature-icon"><i class="fas fa-boxes-stacked"></i></div>
-          <div class="feature-content">
-            <i class="fas fa-boxes-stacked"></i>
-            <h4>Porta-paletes<br/>e Stackers</h4>
-            <p>Equipamentos compactos e robustos ideais para operações em centros logísticos, supermercados e armazéns.</p>
-            <a href="javascript:void(0)"><i class="icon-arrow-right"></i> saiba mais</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-6 col-md-6 col-lg-4">
-        <div class="feature-panel bg-white">
-          <div class="feature-icon"><i class="fas fa-robot"></i></div>
-          <div class="feature-content">
-            <i class="fas fa-robot"></i>
-            <h4>Mesas Elevatórias<br/>e AGV</h4>
-            <p>Automatize e otimize a movimentação de cargas com mesas elevatórias hidráulicas e veículos autoguiados (AGV).</p>
-            <a href="javascript:void(0)"><i class="icon-arrow-right"></i> saiba mais</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="more-features">
-      <p>Soluções Noblelift para movimentar o seu negócio. <a href="javascript:void(0)">Encontre a ideal para si</a></p>
-    </div>
-  </div>
-</section>
-
-
-      <!--
-      ============================
-      CTA #3 Section
-      ============================
-      
-      
-      
-      -->
-<section class="cta cta-3 bg-theme" id="cta-3">
-  <div class="container">
-    <div class="row">
-      
-      <div class="col-12 col-lg-5">
-        <div class="heading heading-2 heading-light">
-          <p class="heading-subtitle">Direção Certa para o Seu Negócio</p>
-          <h2 class="heading-title">Movimentação de Cargas que Poupa o Seu Tempo!</h2>
-        </div>
-      </div>
-
-      <div class="col-12 col-lg-6 offset-lg-1">
-        <div class="prief-set">
-          <p>Orgulhamo-nos em fornecer equipamentos Noblelift de alta performance, ideais para empresas que valorizam agilidade, eficiência e segurança nas suas operações logísticas. Desde empilhadeiras elétricas até soluções de movimentação personalizada, entregamos confiança em cada carga.</p>
-          <ul class="advantages-list">
-            <li><i class="fas fa-check-circle"></i> Sistema de Controlo de Qualidade</li>
-            <li><i class="fas fa-check-circle"></i> Montagem e durabilidade superior</li>
-            <li><i class="fas fa-check-circle"></i> Garantia de Satisfação Total</li>
-            <li><i class="fas fa-check-circle"></i> Equipamentos testados e certificados</li>
-            <li><i class="fas fa-check-circle"></i> Equipa técnica especializada</li>
-            <li><i class="fas fa-check-circle"></i> Atendimento profissional e qualificado</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="action-panels">
-      <div class="row no-gutters">
-
-        <div class="col-12 col-lg-6">
-          <div class="action-panel">
-            <div class="action-panel-img">
-              <div class="bg-section"><img src="assets/images/cta/2.jpg" alt="imagem"/></div>
-            </div>
-            <div class="action-panel-content">
-              <div class="panel-icon"><i class="flaticon-015-scale"></i></div>
-              <div class="panel-heading">
-                <h3>Preço Justo e Equipamentos Certificados</h3>
-              </div>
-              <a href="javascript:void(0)"><i class="icon-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-lg-6">
-          <div class="action-panel">
-            <div class="action-panel-img">
-              <div class="bg-section"><img src="assets/images/cta/3.jpg" alt="imagem"/></div>
-            </div>
-            <div class="action-panel-content inverted">
-              <div class="panel-icon"><i class="flaticon-017-pallet"></i></div>
-              <div class="panel-heading">
-                <h3>Eficiência Operacional Garantida</h3>
-              </div>
-              <a href="javascript:void(0)"><i class="icon-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-
-      <!--
-      ============================
-      Cases & Clients #1 Section
-      ============================
-      -->
-<section class="cases-clients bg-parllax" id="cases-clients-1">
-  <div class="cases-standard">
-    <div class="container">
-      <div class="heading text-center">
-        <p class="heading-subtitle">Explore Casos Recentes</p>
-        <h2 class="heading-title">Projetos em Destaque</h2>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <div class="carousel owl-carousel carousel-navs carousel-dots" data-slide="3" data-slide-rs="1" data-autoplay="true" data-nav="true" data-dots="false" data-space="30" data-loop="true" data-speed="3000">
-
-            <!-- Exemplo 1 -->
-            <div class="case-item">
-              <div class="case-item-warp">
-                <div class="case-img"><img src="assets/images/work/full/1.jpg" alt="Projeto"/></div>
-                <div class="case-content"> 
-                  <div class="case-title">
-                    <h4><a href="#">Fábrica de Químicos Luanda Sul</a></h4>
-                  </div>
-                  <div class="case-cat"><a href="#">armazenamento</a><a href="#">automação</a></div>
-                  <div class="case-desc">
-                    <p>Implementámos empilhadeiras Noblelift com sistemas de elevação personalizados, melhorando a eficiência e segurança do local.</p>
-                  </div>
-                  <div class="case-more"><a href="#"><i class="icon-arrow-right"></i> ver estudo de caso</a></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Exemplo 2 -->
-            <div class="case-item">
-              <div class="case-item-warp">
-                <div class="case-img"><img src="assets/images/work/full/2.jpg" alt="Projeto"/></div>
-                <div class="case-content"> 
-                  <div class="case-title">
-                    <h4><a href="#">Centro Logístico de Viana</a></h4>
-                  </div>
-                  <div class="case-cat"><a href="#">porta-paletes</a><a href="#">distribuição</a></div>
-                  <div class="case-desc">
-                    <p>Redução de custos operacionais com introdução de stackers elétricos e reorganização de layout com suporte Noblelift.</p>
-                  </div>
-                  <div class="case-more"><a href="#"><i class="icon-arrow-right"></i> ver estudo de caso</a></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Exemplo 3 -->
-            <div class="case-item">
-              <div class="case-item-warp">
-                <div class="case-img"><img src="assets/images/work/full/3.jpg" alt="Projeto"/></div>
-                <div class="case-content"> 
-                  <div class="case-title">
-                    <h4><a href="#">Otimização Industrial</a></h4>
-                  </div>
-                  <div class="case-cat"><a href="#">logística</a><a href="#">produtividade</a></div>
-                  <div class="case-desc">
-                    <p>Integração de equipamentos Noblelift com sistemas de gestão de armazém (WMS) em unidades industriais locais.</p>
-                  </div>
-                  <div class="case-more"><a href="#"><i class="icon-arrow-right"></i> ver estudo de caso</a></div>
+              <div class="signature-block">
+                <div class="signature-body">
+                  <h6>Direção Geral</h6>
+                  <p>Noblelift Angola</p>
                 </div>
               </div>
             </div>
 
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+      </section>
 
-  <!-- Clientes -->
-  <div class="clients clients-carousel clients-1 pt-0">
-    <div class="container">
-      <div class="row"> 
-        <div class="col-12 col-lg-8 offset-lg-2">
-          <div class="heading heading-5 text-center">
-            <p class="heading-subtitle">Confiança e Parceria</p>
-            <h2 class="heading-title">Nossos Clientes</h2>
-            <p class="heading-desc">Empresas em Angola confiam na Noblelift Angola para modernizar as suas operações logísticas e industriais com equipamentos certificados e suporte local.</p>
+      <!-- CTA: Quote -->
+      <section class="cta bg-overlay bg-overlay-dark2" id="cta-1">
+        <div class="bg-section">
+          <img src="assets/images/real/image9.jpeg" alt="Showroom Noblelift"/>
+        </div>
+        <div class="container">
+          <div class="row">
+
+            <div class="col-12 col-lg-6">
+              <div class="heading heading-2 heading-light">
+                <p class="heading-subtitle">Porque escolher a Noblelift?</p>
+                <h2 class="heading-title">Soluções logísticas inteligentes, acessíveis e prontas para o futuro.</h2>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="icon-set">
+                <div class="icon-panel">
+                  <i class="fas fa-money-check-alt"></i><span>preços transparentes</span>
+                </div>
+                <div class="icon-panel">
+                  <i class="fas fa-shipping-fast"></i><span>entrega rápida em Luanda</span>
+                </div>
+                <div class="icon-panel">
+                  <i class="fas fa-tools"></i><span>assistência técnica local</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 mt-4 text-center">
+              <a class="btn btn--primary" href="contato.html#orcamento"><i class="fas fa-file-invoice-dollar"></i> Solicitar Orçamento</a>
+              <a class="btn btn--white ml-2" href="assets/downloads/Noblelift-Catalogo-2026.pdf" download><i class="fas fa-download"></i> Baixar Catálogo</a>
+            </div>
+
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <div class="carousel owl-carousel" data-slide="6" data-slide-rs="2" data-autoplay="true" data-nav="false" data-dots="false" data-space="0" data-loop="true" data-speed="3000">
-            <div class="client"><img src="assets/images/clients/1.png" alt="cliente"/></div>
-            <div class="client"><img src="assets/images/clients/2.png" alt="cliente"/></div>
-            <div class="client"><img src="assets/images/clients/3.png" alt="cliente"/></div>
-            <div class="client"><img src="assets/images/clients/4.png" alt="cliente"/></div>
-            <div class="client"><img src="assets/images/clients/5.png" alt="cliente"/></div>
-            <div class="client"><img src="assets/images/clients/6.png" alt="cliente"/></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
-      <!--
-      ============================
-      Services #3 Section
-      ============================
-      -->
-     <section class="testimonial testimonial-3 bg-overlay bg-overlay-theme">
-  <div class="bg-section"><img src="assets/images/background/1.jpg" alt="imagem de fundo"/></div>
-  <div class="container">
-    <div class="row">
-
-      <div class="col-12 col-lg-6">
-        <div class="heading heading-light heading-6"> 
-          <p class="heading-subtitle">O que dizem os nossos clientes</p>
-          <h2 class="heading-title">
-            Avaliamos Cada Projeto<br/>Individualmente e Oferecemos<br/>a Melhor Solução!</h2>
-          <p class="heading-desc">Apoiamos empresas de diversos setores com equipamentos fiáveis, suporte local e resultados comprovados.</p>
-          <a class="btn btn--transparent btn--inverse" href="#">ver serviços</a>
-        </div>
-      </div>
-
-      <div class="col-12 col-lg-6">
-        <div class="carousel owl-carousel carousel-dots" data-slide="1" data-slide-rs="1" data-autoplay="false" data-nav="false" data-dots="true" data-space="40" data-loop="true" data-speed="800">
-
-          <!-- Testemunho 1 -->
-          <div class="testimonial-panel">
-            <div class="testimonial-panel-warp">
-              <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
-              <div class="testimonial-body">
-                <div class="testimonial-img"><img src="assets/images/testimonial/3.jpg" alt="Cliente"/></div>
-                <div class="testimonial-content">
-                  <div class="testimonial-rating">
-                    <i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i>
-                  </div>
-                  <p>Desde que começámos a usar as empilhadeiras Noblelift, conseguimos reduzir os custos operacionais e aumentar a produtividade no nosso centro de distribuição em Viana.</p>
-                  <div class="testimonial-meta">
-                    <h4>Pedro Afonso</h4>
-                    <p>Gestor de Operações, LogiTrans Angola</p>
+      <!-- Features -->
+      <section class="features bg-gray" id="features-1">
+        <div class="container">
+          <div class="heading heading-4">
+            <div class="row">
+              <div class="col-12 col-lg-6">
+                <p class="heading-subtitle">Equipamentos seguros e fiáveis</p>
+                <h2 class="heading-title">A movimentar grandes operações em Angola.</h2>
+              </div>
+              <div class="col-12 col-lg-6">
+                <p class="heading-desc">A nossa experiência em movimentação de cargas, aliada à tecnologia Noblelift, oferece soluções adaptadas à indústria angolana com suporte local e eficiência internacional.</p>
+                <div class="actions-container">
+                  <a class="btn btn-transparent" href="contato.html#orcamento">Pedir Orçamento</a>
+                  <div class="employee-info">
+                    <div class="employee-body">
+                      <h6><a href="tel:+244928283666" style="color:inherit;">+244 928 283 666</a></h6>
+                      <p>Atendimento Comercial</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Testemunho 2 -->
-          <div class="testimonial-panel">
-            <div class="testimonial-panel-warp">
-              <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
-              <div class="testimonial-body">
-                <div class="testimonial-img"><img src="assets/images/testimonial/4.jpg" alt="Cliente"/></div>
-                <div class="testimonial-content">
-                  <div class="testimonial-rating">
-                    <i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i>
-                  </div>
-                  <p>O suporte técnico da Noblelift Angola é rápido e eficaz. Recebemos assistência imediata sempre que precisamos.</p>
-                  <div class="testimonial-meta">
-                    <h4>Celma dos Santos</h4>
-                    <p>Supervisora de Armazém, AgroIndústria Luanda</p>
-                  </div>
+          <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-4">
+              <div class="feature-panel bg-white">
+                <div class="feature-icon"><i class="fas fa-truck-loading"></i></div>
+                <div class="feature-content">
+                  <i class="fas fa-truck-loading"></i>
+                  <h4>Empilhadeiras<br/>Eléctricas</h4>
+                  <p>Soluções eficientes e ecológicas para manuseio de cargas, com tecnologia de baterias de lítio e autonomia prolongada.</p>
+                  <a href="produtos.html#empilhadeiras"><i class="icon-arrow-right"></i> saiba mais</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+              <div class="feature-panel bg-white">
+                <div class="feature-icon"><i class="fas fa-dolly"></i></div>
+                <div class="feature-content">
+                  <i class="fas fa-dolly"></i>
+                  <h4>Porta-paletes<br/>e Empilhadores</h4>
+                  <p>Equipamentos compactos e robustos, ideais para centros logísticos, supermercados e armazéns industriais.</p>
+                  <a href="produtos.html#porta-paletes"><i class="icon-arrow-right"></i> saiba mais</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-md-6 col-lg-4">
+              <div class="feature-panel bg-white">
+                <div class="feature-icon"><i class="fas fa-arrows-up-down"></i></div>
+                <div class="feature-content">
+                  <i class="fas fa-arrows-up-down"></i>
+                  <h4>Mesas Elevatórias<br/>e Plataformas</h4>
+                  <p>Mesas elevatórias hidráulicas e plataformas para optimizar a movimentação vertical no seu armazém.</p>
+                  <a href="produtos.html#mesa-elevatoria"><i class="icon-arrow-right"></i> saiba mais</a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Testemunho 3 -->
-          <div class="testimonial-panel">
-            <div class="testimonial-panel-warp">
-              <div class="testimonial-icon"><i class="icon-Quote-Icon"></i></div>
-              <div class="testimonial-body">
-                <div class="testimonial-img"><img src="assets/images/testimonial/3.jpg" alt="Cliente"/></div>
-                <div class="testimonial-content">
-                  <div class="testimonial-rating">
-                    <i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i><i class="icon-Star-1"></i>
-                  </div>
-                  <p>Optámos pela Noblelift devido à sua reputação internacional. Hoje podemos confirmar: os equipamentos são robustos e confiáveis.</p>
-                  <div class="testimonial-meta">
-                    <h4>Fernando Miguel</h4>
-                    <p>Diretor Industrial, KeroLog</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="more-features">
+            <p>Soluções Noblelift para movimentar o seu negócio. <a href="produtos.html">Veja o catálogo completo</a></p>
           </div>
-
         </div>
-      </div>
+      </section>
 
-    </div>
-  </div>
-</section>
+      <!-- Image Strip -->
+      <section class="image-strip">
+        <a href="produtos.html#empilhadeiras">
+          <img src="assets/images/real/image4.jpeg" alt="Empilhadeira eléctrica Noblelift" loading="lazy"/>
+          <span class="label"><i class="fas fa-arrow-right"></i> Empilhadeiras</span>
+        </a>
+        <a href="produtos.html#porta-paletes">
+          <img src="assets/images/real/image1.jpeg" alt="Porta-paletes eléctricos Noblelift" loading="lazy"/>
+          <span class="label"><i class="fas fa-arrow-right"></i> Porta-paletes</span>
+        </a>
+        <a href="produtos.html#empilhadores">
+          <img src="assets/images/real/image6.jpeg" alt="Empilhadores manuais Noblelift" loading="lazy"/>
+          <span class="label"><i class="fas fa-arrow-right"></i> Empilhadores</span>
+        </a>
+        <a href="produtos.html#mesa-elevatoria">
+          <img src="assets/images/real/image10.jpeg" alt="Porta-paletes de alta elevação Noblelift" loading="lazy"/>
+          <span class="label"><i class="fas fa-arrow-right"></i> Mesa Elevatória</span>
+        </a>
+      </section>
 
-    
-      <!--
-      ============================
-      Google Maps Section
-      ============================
-      -->
-    <section class="map map-3" id="map-1">
-  <iframe class="map-gray map-gray" src="https://maps.google.com/maps?q=Luanda,%20Angola&amp;t=m&amp;z=13&amp;output=embed&amp;iwloc=near" width="600" height="450" style="border:0" allowfullscreen="" loading="lazy"></iframe>
+      <!-- CTA: Advantages -->
+      <section class="cta cta-3 bg-theme" id="cta-3">
+        <div class="container">
+          <div class="row">
 
-  <div class="container"> 
-    <div class="row"> 
-      <div class="col-12 col-lg-4">
-        <div class="accordion accordion-4" id="accordion01">
-          <h4 class="panel">Localização Angola</h4>
-
-          <div class="card">
-            <div class="card-heading">
-              <a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion01" href="#collapse01-1">Escritório Central – Luanda</a>
+            <div class="col-12 col-lg-5">
+              <div class="heading heading-2 heading-light">
+                <p class="heading-subtitle">Direção certa para o seu negócio</p>
+                <h2 class="heading-title">Movimentação de cargas que poupa o seu tempo!</h2>
+              </div>
             </div>
-            <div class="collapse show" id="collapse01-1" data-parent="#accordion01">
-              <div class="card-body">
-                <ul class="list-unstyled info">
-                  <li>
-                    <span class="fas fa-map-marker-alt"></span>
-                    <a href="#" target="_blank">Rua das Empresas, Talatona, Luanda, Angola</a>
-                  </li>
-                  <li>
-                    <span class="fas fa-envelope"></span>
-                    <a href="mailto:info@nobleliftangola.com">info@nobleliftangola.com</a>
-                  </li>
-                  <li>
-                    <span class="fas fa-phone-alt"></span>
-                    <a href="tel:+244923000000">+244 923 000 000</a>
-                  </li>
+
+            <div class="col-12 col-lg-6 offset-lg-1">
+              <div class="prief-set">
+                <p>Fornecemos equipamentos Noblelift de alta performance, ideais para empresas que valorizam agilidade, eficiência e segurança nas suas operações logísticas — desde empilhadeiras eléctricas a porta-paletes e plataformas, com confiança em cada carga.</p>
+                <ul class="advantages-list">
+                  <li><i class="fas fa-check-circle"></i> Equipamentos certificados internacionalmente</li>
+                  <li><i class="fas fa-check-circle"></i> Stock disponível no showroom em Luanda</li>
+                  <li><i class="fas fa-check-circle"></i> Garantia e assistência pós-venda</li>
+                  <li><i class="fas fa-check-circle"></i> Equipa técnica especializada</li>
+                  <li><i class="fas fa-check-circle"></i> Peças e acessórios de origem</li>
+                  <li><i class="fas fa-check-circle"></i> Atendimento profissional em português</li>
                 </ul>
               </div>
             </div>
+
           </div>
 
-          <!-- Se deseja adicionar mais localizações nacionais, duplique o card acima -->
+          <div class="action-panels">
+            <div class="row no-gutters">
 
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+              <div class="col-12 col-lg-6">
+                <div class="action-panel">
+                  <div class="action-panel-img">
+                    <div class="bg-section"><img src="assets/images/real/image7.jpeg" alt="Empilhadores Noblelift"/></div>
+                  </div>
+                  <div class="action-panel-content">
+                    <div class="panel-icon"><i class="flaticon-015-scale"></i></div>
+                    <div class="panel-heading">
+                      <h3>Equipamentos certificados, prontos a entregar</h3>
+                    </div>
+                    <a href="produtos.html"><i class="icon-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
 
-      <!--
-      ============================
-      Footer #1
-      ============================
-      -->
-     <footer class="footer footer-1">
-  <div class="footer-top"> 
-    <div class="container"> 
-      <div class="row"> 
-        <div class="col-12 col-lg-3 col-xl-4">
-          <div class="footer-logo">
-            <img class="footer-logo" src="assets/images/logo/nobelift.png" alt="Noblelift Angola Logo" style="border-radius: 12px;" />
+              <div class="col-12 col-lg-6">
+                <div class="action-panel">
+                  <div class="action-panel-img">
+                    <div class="bg-section"><img src="assets/images/real/image10.jpeg" alt="Porta-paletes de alta elevação Noblelift"/></div>
+                  </div>
+                  <div class="action-panel-content inverted">
+                    <div class="panel-icon"><i class="flaticon-017-pallet"></i></div>
+                    <div class="panel-heading">
+                      <h3>Eficiência operacional garantida</h3>
+                    </div>
+                    <a href="galeria.html"><i class="icon-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
+
         </div>
-        <div class="col-12 col-lg-9 col-xl-8">
-          <div class="widget-newsletter">
-            <div class="widget-content">
-              <p>Receba novidades sobre<br/>soluções de movimentação e logística.</p>
-              <form class="form-newsletter mailchimp">
-                <input class="form-control" type="email" name="email" placeholder="Seu endereço de email"/>
-                <input class="btn btn--primary" type="submit" value="subscrever"/>
-                <div class="subscribe-alert"></div>
-              </form>
+      </section>
+
+      <!-- Map / Location -->
+      <section class="map map-3" id="map-1">
+        <iframe class="map-gray map-gray" src="https://maps.google.com/maps?q=Paragem%20da%20Mutamba%2C%20Luanda%2C%20Angola&amp;t=m&amp;z=14&amp;output=embed&amp;iwloc=near" width="600" height="450" style="border:0" allowfullscreen="" loading="lazy"></iframe>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-4">
+              <div class="accordion accordion-4" id="accordion01">
+                <h4 class="panel">Localização Angola</h4>
+
+                <div class="card">
+                  <div class="card-heading">
+                    <a class="card-link collapsed" data-toggle="collapse" data-parent="#accordion01" href="#collapse01-1">Showroom Luanda</a>
+                  </div>
+                  <div class="collapse show" id="collapse01-1" data-parent="#accordion01">
+                    <div class="card-body">
+                      <ul class="list-unstyled info">
+                        <li>
+                          <span class="fas fa-map-marker-alt"></span>
+                          <a href="https://maps.google.com/?q=Paragem+da+Mutamba,+Luanda,+Angola" target="_blank" rel="noopener">Paragem da Mutamba, via expresse, Luanda, Angola</a>
+                        </li>
+                        <li>
+                          <span class="fas fa-envelope"></span>
+                          <a href="mailto:txtailai@yeah.net">txtailai@yeah.net</a>
+                        </li>
+                        <li>
+                          <span class="fas fa-phone-alt"></span>
+                          <a href="tel:+244928283666">+244 928 283 666</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
+      </section>
 
-  <div class="footer-center">
-    <div class="container">
-      <div class="row">
-        
-        <!-- SOBRE -->
-        <div class="col-sm-6 col-md-6 col-lg-3 footer-widget widget-about">
-          <div class="footer-widget-title"><h5>Sobre Nós</h5></div>
-          <div class="widget-content">
-            <p>A Noblelift Angola é representante oficial da Noblelift na distribuição de empilhadeiras, porta-paletes, mesas elevatórias e soluções logísticas em todo território nacional.</p>
-            <div class="module module-social">
-              <a class="share-facebook" href="#"><i class="fab fa-facebook-f"></i></a>
-              <a class="share-instagram" href="#"><i class="fab fa-instagram"></i></a>
-              <a class="share-linkedin" href="#"><i class="fab fa-linkedin-in"></i></a>
+      <!-- Footer -->
+      <footer class="footer footer-1">
+        <div class="footer-center">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-sm-6 col-md-6 col-lg-3 footer-widget widget-about">
+                <div class="footer-logo mb-3">
+                  <img src="assets/images/logo/nobelift.png" alt="Noblelift Angola" style="border-radius: 12px; max-width: 160px;" />
+                </div>
+                <div class="widget-content">
+                  <p>A Noblelift Angola é representante oficial da Noblelift na distribuição de empilhadeiras, porta-paletes, mesas elevatórias e soluções logísticas em todo território nacional.</p>
+                  <div class="module module-social">
+                    <a class="share-facebook" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a class="share-instagram" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a class="share-linkedin" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-6 col-lg-2 offset-lg-1 footer-widget widget-links">
+                <div class="footer-widget-title"><h5>Produtos</h5></div>
+                <div class="widget-content">
+                  <ul>
+                    <li><a href="produtos.html#empilhadeiras">Empilhadeiras Eléctricas</a></li>
+                    <li><a href="produtos.html#porta-paletes">Porta-paletes</a></li>
+                    <li><a href="produtos.html#empilhadores">Empilhadores</a></li>
+                    <li><a href="produtos.html#mesa-elevatoria">Mesa Elevatória</a></li>
+                    <li><a href="produtos.html#plataformas">Plataformas</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-6 col-lg-3 footer-widget widget-links">
+                <div class="footer-widget-title"><h5>Site</h5></div>
+                <div class="widget-content">
+                  <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="sobre.html">Empresa</a></li>
+                    <li><a href="produtos.html">Produtos</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="assets/downloads/Noblelift-Catalogo-2026.pdf" download>Catálogo 2026</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col-sm-6 col-md-6 col-lg-3 footer-widget widget-contact">
+                <div class="footer-widget-title"><h5>Contato</h5></div>
+                <div class="widget-content">
+                  <p>Tem dúvidas ou precisa de ajuda? Fale com a nossa equipa.</p>
+                  <ul>
+                    <li class="phone"><a href="tel:+244928283666"><i class="fas fa-phone-alt"></i> +244 928 283 666</a></li>
+                    <li class="address"><a href="https://maps.google.com/?q=Paragem+da+Mutamba,+Luanda,+Angola" target="_blank" rel="noopener"><i class="fas fa-map-marker-alt"></i> Paragem da Mutamba, via expresse, Luanda – Angola</a></li>
+                    <li class="email"><a href="mailto:txtailai@yeah.net"><i class="fas fa-envelope"></i> txtailai@yeah.net</a></li>
+                  </ul>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
 
-        <!-- SERVIÇOS -->
-        <div class="col-sm-6 col-md-6 col-lg-2 offset-lg-2 footer-widget widget-links">
-          <div class="footer-widget-title"><h5>Produtos</h5></div>
-          <div class="widget-content">
-            <ul>
-              <li><a href="#">Empilhadeiras Eléctricas</a></li>
-              <li><a href="#">Porta-paletes</a></li>
-              <li><a href="#">Mesas Elevatórias</a></li>
-              <li><a href="#">AGV & Automação</a></li>
-              <li><a href="#">Peças & Assistência</a></li>
-              <li><a href="#">Formação Técnica</a></li>
-            </ul>
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-md-12 text--center footer-copyright">
+              <div class="copyright">
+                <span>&copy; 2026 Noblelift Angola. Todos os direitos reservados.</span>
+              </div>
+            </div>
           </div>
         </div>
-
-        <!-- INDÚSTRIAS -->
-        <div class="col-sm-6 col-md-6 col-lg-2 footer-widget widget-links">
-          <div class="footer-widget-title"><h5>Indústrias</h5></div>
-          <div class="widget-content">
-            <ul>
-              <li><a href="#">Armazéns & Logística</a></li>
-              <li><a href="#">Distribuição & Retalho</a></li>
-              <li><a href="#">Indústria Alimentar</a></li>
-              <li><a href="#">Construção Civil</a></li>
-              <li><a href="#">Química & Energia</a></li>
-              <li><a href="#">Manutenção Industrial</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- CONTACTOS -->
-        <div class="col-sm-6 col-md-6 col-lg-3 footer-widget widget-contact">
-          <div class="footer-widget-title"><h5>Contato Rápido</h5></div>
-          <div class="widget-content">
-            <p>Tem dúvidas ou precisa de ajuda? Fale com a nossa equipa.</p>
-            <ul>
-              <li class="phone"><a href="tel:+244923000000"><i class="fas fa-phone-alt"></i> +244 923 000 000</a></li>
-              <li class="address"><a href="#">Rua das Empresas, Talatona, Luanda – Angola</a></li>
-              <li class="email"><a href="mailto:info@nobleliftangola.com"><i class="fas fa-envelope"></i> info@nobleliftangola.com</a></li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <div class="row">
-      <div class="col-md-12 text--center footer-copyright">
-        <div class="copyright">
-          <span>&copy; 2025 Noblelift Angola. Desenvolvido com ❤️ por</span> <a href="#" target="_blank">MD CORPORATION</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
+      </footer>
 
       <div class="backtop" id="back-to-top"><i class="fas fa-chevron-up"></i></div>
     </div>
-    <!--  Footer Scripts==
-    -->
-    <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
-   
- <script src="assets/js/vendor.min.js"></script>
+
+    <script src="assets/js/vendor/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/vendor.min.js"></script>
     <script src="assets/js/functions.js"></script>
   </body>
-
-<!-- Mirrored from demo.zytheme.com/equita/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 23 Jul 2025 15:10:30 GMT -->
 </html>
