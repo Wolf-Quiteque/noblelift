@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "Produtos Noblelift Angola",
     description:
       "Empilhadeiras electricas, porta-paletes, empilhadores, mesas elevatorias e plataformas elevatorias Noblelift em Luanda.",
-    url: "https://noblelift.ao/produtos",
+    url: "https://www.nobliftangola.com/produtos",
     images: [
       {
         url: "/assets/images/real/image16.jpeg",

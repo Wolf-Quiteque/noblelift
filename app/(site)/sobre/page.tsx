@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Sobre a Noblelift Angola",
     description:
       "Representante oficial Noblelift em Angola, com showroom em Luanda e suporte local para equipamentos logisticos.",
-    url: "https://noblelift.ao/sobre",
+    url: "https://www.nobliftangola.com/sobre",
     images: [
       {
         url: "/assets/images/real/company_location_front.jpeg",

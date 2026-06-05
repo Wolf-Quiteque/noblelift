@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "Galeria Noblelift Angola",
     description:
       "Fotos reais do showroom Noblelift Angola, equipamentos disponiveis e instalacoes em Luanda.",
-    url: "https://noblelift.ao/galeria",
+    url: "https://www.nobliftangola.com/galeria",
     images: [
       {
         url: "/assets/images/real/image9.jpeg",

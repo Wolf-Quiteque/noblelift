@@ -19,7 +19,7 @@ export const metadata: Metadata = {
       "Noblelift Angola – Empilhadeiras e Equipamentos Logísticos em Luanda",
     description:
       "Representante oficial Noblelift em Angola. Showroom em Luanda — empilhadeiras eléctricas, porta-paletes, empilhadores, mesas elevatórias e plataformas. Stock e suporte técnico local.",
-    url: "https://noblelift.ao/",
+    url: "https://www.nobliftangola.com/",
     images: [
       {
         url: "/assets/images/real/company_location_front.jpeg",
@@ -66,8 +66,8 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Noblelift Angola",
-  image: "https://noblelift.ao/assets/images/real/company_location_front.jpeg",
-  url: "https://noblelift.ao/",
+  image: "https://www.nobliftangola.com/assets/images/real/company_location_front.jpeg",
+  url: "https://www.nobliftangola.com/",
   telephone: "+244928283666",
   email: "txtailai@yeah.net",
   address: {

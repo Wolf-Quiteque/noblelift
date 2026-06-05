@@ -1,6 +1,6 @@
 import type { ProductCategory } from "@/lib/types";
 
-export const siteUrl = "https://noblelift.ao";
+export const siteUrl = "https://www.nobliftangola.com";
 export const siteName = "Noblelift Angola";
 export const defaultOgImage = "/assets/images/real/company_location_front.jpeg";
 

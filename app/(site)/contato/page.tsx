@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     title: "Contato Noblelift Angola",
     description:
       "Telefone, email, morada, mapa e pedido de orcamento para equipamentos Noblelift em Luanda.",
-    url: "https://noblelift.ao/contato",
+    url: "https://www.nobliftangola.com/contato",
     images: [
       {
         url: "/assets/images/real/company_location_front.jpeg",

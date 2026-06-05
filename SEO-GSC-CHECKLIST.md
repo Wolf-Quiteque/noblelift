@@ -7,19 +7,19 @@ Use this after deploying the latest site build.
 1. Submit the sitemap:
    - Open Google Search Console.
    - Go to `Indexing > Sitemaps`.
-   - Submit: `https://noblelift.ao/sitemap.xml`.
+   - Submit: `https://www.nobliftangola.com/sitemap.xml`.
 
 2. Test crawl files:
-   - Open `https://noblelift.ao/robots.txt`.
-   - Open `https://noblelift.ao/sitemap.xml`.
+   - Open `https://www.nobliftangola.com/robots.txt`.
+   - Open `https://www.nobliftangola.com/sitemap.xml`.
    - Confirm the sitemap lists `/`, `/produtos`, `/contato`, `/sobre`, and `/galeria`.
 
 3. Inspect important URLs:
-   - `https://noblelift.ao/`
-   - `https://noblelift.ao/produtos`
-   - `https://noblelift.ao/contato`
-   - `https://noblelift.ao/sobre`
-   - `https://noblelift.ao/galeria`
+   - `https://www.nobliftangola.com/`
+   - `https://www.nobliftangola.com/produtos`
+   - `https://www.nobliftangola.com/contato`
+   - `https://www.nobliftangola.com/sobre`
+   - `https://www.nobliftangola.com/galeria`
 
 For each URL, use `URL Inspection`, confirm it is indexable, then request indexing if Google has not indexed it yet.
 
@@ -47,5 +47,5 @@ For each URL, use `URL Inspection`, confirm it is indexable, then request indexi
 ## Notes
 
 - Search Console cannot directly boost rankings. It shows what Google can crawl, index, and rank.
-- If the real production domain is not `https://noblelift.ao`, update `siteUrl` in `lib/seo.ts` before deploying.
+- If the production domain changes later, update `siteUrl` in `lib/seo.ts` before deploying.
 - If Google asks for an HTML verification tag/file later, add the exact token Google gives you. Do not invent one.
