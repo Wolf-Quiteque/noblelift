@@ -1,0 +1,27 @@
+
+> noblelift-angola@1.0.0 dev
+> next dev
+
+   ▲ Next.js 15.5.18
+   - Local:        http://localhost:3000
+   - Network:      http://10.86.7.103:3000
+
+ ✓ Starting...
+ ✓ Ready in 5.2s
+ ○ Compiling / ...
+ ✓ Compiled / in 16.5s (626 modules)
+ GET / 200 in 20405ms
+ GET / 200 in 1002ms
+ ○ Compiling /sobre ...
+ ✓ Compiled /sobre in 1693ms (632 modules)
+ GET /sobre 200 in 2457ms
+ ○ Compiling /galeria ...
+ ✓ Compiled /galeria in 924ms (640 modules)
+ GET /galeria 200 in 1178ms
+ ○ Compiling /produtos ...
+ ✓ Compiled /produtos in 944ms (642 modules)
+ GET /produtos 200 in 1354ms
+ ○ Compiling /contato ...
+ ✓ Compiled /contato in 935ms (650 modules)
+ GET /contato 200 in 1392ms
+[?25h

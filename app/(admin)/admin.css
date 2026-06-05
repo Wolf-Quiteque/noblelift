@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Admin-only base. This file is imported solely by the admin layout, so Next
+   route-splits it and it never loads on the public site. */
+:root {
+  color-scheme: light;
+}
+
+/* Reusable element classes */
+.admin-input {
+  @apply w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/20 placeholder:text-gray-400;
+}
+.admin-label {
+  @apply mb-1.5 block text-sm font-medium text-gray-700;
+}
+.admin-btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-60;
+}
+.admin-btn-primary {
+  @apply admin-btn bg-brand text-white hover:bg-brand-dark;
+}
+.admin-btn-ghost {
+  @apply admin-btn border border-gray-300 bg-white text-gray-700 hover:bg-gray-50;
+}
+.admin-card {
+  @apply rounded-xl border border-gray-200 bg-white p-5 shadow-sm;
+}
