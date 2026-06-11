@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Fragment } from "react";
+import { Fragment, type ReactNode } from "react";
 import SmartLink from "@/components/SmartLink";
 import PageTitle from "@/components/PageTitle";
 import ContactForm from "@/components/ContactForm";
-import { getSiteConfig } from "@/lib/data";
+import { getContactContent, getSiteConfig } from "@/lib/data";
 import { breadcrumbJsonLd } from "@/lib/seo";
+import type { ContactInfoCard, SiteConfig } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Contato",
   description:
-    "Contacte a Noblelift Angola — telefone, email, morada e formulário de pedido de orçamento. Showroom em Luanda.",
+    "Contacte a Noblelift Angola - telefone, email, morada e formulario de pedido de orcamento. Showroom em Luanda.",
   alternates: { canonical: "/contato" },
   openGraph: {
     type: "website",
@@ -68,11 +69,48 @@ const styles = `
   #map-container iframe { width: 100%; height: 420px; border: 0; display: block; }
 `;
 
+function cardContent(card: ContactInfoCard, site: SiteConfig): ReactNode {
+  if (card.kind === "address") {
+    return (
+      <a href={site.mapsLink} target="_blank" rel="noopener">
+        {site.address}
+      </a>
+    );
+  }
+
+  if (card.kind === "phone") {
+    return <a href={`tel:${site.phoneHref}`}>{site.phone}</a>;
+  }
+
+  if (card.kind === "email") {
+    return <a href={`mailto:${site.email}`}>{site.email}</a>;
+  }
+
+  if (card.kind === "hours") {
+    return site.hours.map((h, i) => (
+      <Fragment key={i}>
+        {h}
+        {i < site.hours.length - 1 && <br />}
+      </Fragment>
+    ));
+  }
+
+  if (card.href) {
+    return (
+      <a href={card.href} target={card.href.startsWith("http") ? "_blank" : undefined} rel="noopener">
+        {card.text}
+      </a>
+    );
+  }
+
+  return card.text;
+}
+
 export default async function ContatoPage() {
-  const site = await getSiteConfig();
+  const [site, contact] = await Promise.all([getSiteConfig(), getContactContent()]);
   const pageJsonLd = breadcrumbJsonLd([
     { name: "Inicio", path: "/" },
-    { name: "Contato", path: "/contato" },
+    { name: contact.hero.crumb, path: "/contato" },
   ]);
 
   return (
@@ -81,83 +119,41 @@ export default async function ContatoPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }} />
 
       <PageTitle
-        image="/assets/images/real/company_location_front.jpeg"
-        imageAlt="Showroom Noblelift Angola"
-        subtitle="Estamos disponíveis para o ajudar"
-        title="Fale Connosco"
-        crumb="Contato"
+        image={contact.hero.image}
+        imageAlt={contact.hero.imageAlt}
+        subtitle={contact.hero.subtitle}
+        title={contact.hero.title}
+        crumb={contact.hero.crumb}
       />
 
-      {/* Contact Info + Form */}
       <section className="contact-section pt-70 pb-70" style={{ background: "#f7f7f7" }}>
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-5">
               <div className="heading heading-3">
-                <p className="heading-subtitle">Como nos encontrar</p>
-                <h2 className="heading-title">Showroom Luanda</h2>
-                <p>
-                  Visite-nos, telefone ou envie-nos um email — a nossa equipa responde em português,
-                  em horário comercial.
-                </p>
+                <p className="heading-subtitle">{contact.info.subtitle}</p>
+                <h2 className="heading-title">{contact.info.title}</h2>
+                <p>{contact.info.description}</p>
               </div>
 
-              <div className="contact-info-card">
-                <i className="fas fa-map-marker-alt" />
-                <div>
-                  <h5>Morada</h5>
-                  <p>
-                    <a href={site.mapsLink} target="_blank" rel="noopener">
-                      {site.address}
-                    </a>
-                  </p>
+              {contact.info.cards.map((card, i) => (
+                <div className="contact-info-card" key={`${card.title}-${i}`}>
+                  <i className={card.icon} />
+                  <div>
+                    <h5>{card.title}</h5>
+                    <p>{cardContent(card, site)}</p>
+                  </div>
                 </div>
-              </div>
-
-              <div className="contact-info-card">
-                <i className="fas fa-phone-alt" />
-                <div>
-                  <h5>Telefone</h5>
-                  <p>
-                    <a href={`tel:${site.phoneHref}`}>{site.phone}</a>
-                  </p>
-                </div>
-              </div>
-
-              <div className="contact-info-card">
-                <i className="fas fa-envelope" />
-                <div>
-                  <h5>Email</h5>
-                  <p>
-                    <a href={`mailto:${site.email}`}>{site.email}</a>
-                  </p>
-                </div>
-              </div>
-
-              <div className="contact-info-card">
-                <i className="fas fa-clock" />
-                <div>
-                  <h5>Horário</h5>
-                  <p>
-                    {site.hours.map((h, i) => (
-                      <Fragment key={i}>
-                        {h}
-                        {i < site.hours.length - 1 && <br />}
-                      </Fragment>
-                    ))}
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
 
             <div className="col-12 col-lg-7">
               <div className="quote-form-wrap" id="orcamento">
                 <div className="heading heading-3 mb-4">
-                  <p className="heading-subtitle">Pedido de orçamento</p>
-                  <h2 className="heading-title">Envie-nos a sua questão</h2>
+                  <p className="heading-subtitle">{contact.form.subtitle}</p>
+                  <h2 className="heading-title">{contact.form.title}</h2>
                   <p>
-                    Preencha o formulário e entraremos em contacto consigo o mais rapidamente
-                    possível. Pode também enviar email directo para{" "}
+                    {contact.form.description}{" "}
                     <a href={`mailto:${site.email}`}>{site.email}</a>.
                   </p>
                 </div>
@@ -166,7 +162,7 @@ export default async function ContatoPage() {
 
                 <div className="text-center mt-4">
                   <SmartLink className="btn btn--secondary" href={site.catalogPdf} download>
-                    <i className="fas fa-download" /> Baixar Catálogo Noblelift 2026
+                    <i className="fas fa-download" /> {contact.form.downloadLabel}
                   </SmartLink>
                 </div>
               </div>
@@ -175,13 +171,12 @@ export default async function ContatoPage() {
         </div>
       </section>
 
-      {/* Map */}
       <section id="map-container">
         <iframe
           src={site.mapEmbedSrc}
           allowFullScreen
           loading="lazy"
-          title="Localização Noblelift Angola"
+          title={contact.mapTitle}
         />
       </section>
     </>

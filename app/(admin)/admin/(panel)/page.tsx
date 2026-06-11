@@ -1,12 +1,13 @@
 import Link from "next/link";
-import { Home, Package, Images, Building2, Settings, ArrowRight } from "lucide-react";
+import { Home, Package, Images, Building2, Phone, Settings, ArrowRight } from "lucide-react";
 
 const cards = [
-  { href: "/admin/inicio", label: "Página Inicial", desc: "Slides, secções e destaques da homepage.", icon: Home },
+  { href: "/admin/inicio", label: "Pagina Inicial", desc: "Slides, secoes e destaques da homepage.", icon: Home },
   { href: "/admin/produtos", label: "Produtos", desc: "Categorias e fichas de produtos.", icon: Package },
   { href: "/admin/galeria", label: "Galeria", desc: "Fotografias do showroom.", icon: Images },
-  { href: "/admin/empresa", label: "Empresa", desc: "Página “Sobre” e valores.", icon: Building2 },
-  { href: "/admin/definicoes", label: "Definições", desc: "Contactos, menu, redes sociais e rodapé.", icon: Settings },
+  { href: "/admin/empresa", label: "Empresa", desc: "Pagina Sobre e valores.", icon: Building2 },
+  { href: "/admin/contato", label: "Contato", desc: "Texto, cartoes e formulario da pagina de contato.", icon: Phone },
+  { href: "/admin/definicoes", label: "Definicoes", desc: "Contactos, menu, redes sociais e rodape.", icon: Settings },
 ];
 
 export default function DashboardPage() {
@@ -15,8 +16,8 @@ export default function DashboardPage() {
       <header className="mb-6">
         <h1 className="text-2xl font-bold text-gray-900">Painel</h1>
         <p className="mt-1 text-sm text-gray-500">
-          Edite qualquer secção do site. As alterações ficam visíveis assim que clicar em
-          “Guardar e publicar”.
+          Edite qualquer secao do site. As alteracoes ficam visiveis assim que clicar em
+          Guardar e publicar.
         </p>
       </header>
 

@@ -1,6 +1,7 @@
 "use server";
 
 import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { hasSupabaseConfig } from "@/lib/supabase/server";
 import { uploadToR2 } from "@/lib/r2";
 
 export type UploadResult =
@@ -10,6 +11,13 @@ export type UploadResult =
 // Receives a File from the admin <ImageField>/<FileField>, uploads it to R2 and
 // returns the public URL. Runs on the Node runtime (aws-sdk). Auth-guarded.
 export async function uploadFile(formData: FormData): Promise<UploadResult> {
+  if (!hasSupabaseConfig()) {
+    return {
+      ok: false,
+      error: "Supabase ainda nao esta configurado. Configure .env.local antes de carregar ficheiros.",
+    };
+  }
+
   const supabase = await createSupabaseServerClient();
   const {
     data: { user },

@@ -193,6 +193,37 @@ export const AboutContentSchema = z.object({
   }),
 });
 
+export const ContactInfoCardSchema = z.object({
+  icon: z.string(),
+  title: z.string(),
+  kind: z.enum(["address", "phone", "email", "hours", "custom"]),
+  text: z.string().optional(),
+  href: z.string().optional(),
+});
+
+export const ContactContentSchema = z.object({
+  hero: z.object({
+    image: z.string(),
+    imageAlt: z.string(),
+    subtitle: z.string(),
+    title: z.string(),
+    crumb: z.string(),
+  }),
+  info: z.object({
+    subtitle: z.string(),
+    title: z.string(),
+    description: z.string(),
+    cards: z.array(ContactInfoCardSchema),
+  }),
+  form: z.object({
+    subtitle: z.string(),
+    title: z.string(),
+    description: z.string(),
+    downloadLabel: z.string(),
+  }),
+  mapTitle: z.string(),
+});
+
 // Maps content key -> schema, used by the generic save action.
 export const contentSchemas = {
   site: SiteConfigSchema,
@@ -200,6 +231,7 @@ export const contentSchemas = {
   products: ProductsSchema,
   gallery: GallerySchema,
   about: AboutContentSchema,
+  contact: ContactContentSchema,
 } as const;
 
 export type ContentKey = keyof typeof contentSchemas;

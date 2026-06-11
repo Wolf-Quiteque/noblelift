@@ -8,6 +8,7 @@ import {
   Package,
   Images,
   Building2,
+  Phone,
   Settings,
 } from "lucide-react";
 
@@ -17,6 +18,7 @@ const items = [
   { href: "/admin/produtos", label: "Produtos", icon: Package },
   { href: "/admin/galeria", label: "Galeria", icon: Images },
   { href: "/admin/empresa", label: "Empresa", icon: Building2 },
+  { href: "/admin/contato", label: "Contato", icon: Phone },
   { href: "/admin/definicoes", label: "Definições", icon: Settings },
 ];
 

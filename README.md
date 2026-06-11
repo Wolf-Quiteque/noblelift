@@ -38,6 +38,7 @@ All editable content lives in typed modules under [`lib/content/`](lib/content):
 | `products.ts` | the 5 product categories + cards |
 | `gallery.ts` | showroom gallery images |
 | `about.ts` | the "Empresa" page |
+| `contact.ts` | the "Contato" page copy, hero and contact cards |
 
 Components never import these directly — they call the async getters in
 [`lib/data.ts`](lib/data.ts) (`getSiteConfig`, `getHomeContent`, `getProducts`,

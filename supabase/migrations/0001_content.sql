@@ -1,5 +1,6 @@
 -- Noblelift Angola CMS — content store
--- One row per content document: 'site' | 'home' | 'products' | 'gallery' | 'about'.
+-- One row per content document:
+-- 'site' | 'home' | 'products' | 'gallery' | 'about' | 'contact'.
 -- The JSON in `data` matches the zod schemas in lib/schemas.ts.
 
 create table if not exists public.content (

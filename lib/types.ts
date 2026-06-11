@@ -17,6 +17,8 @@ import type {
   ProductCategorySchema,
   GalleryImageSchema,
   AboutContentSchema,
+  ContactInfoCardSchema,
+  ContactContentSchema,
 } from "@/lib/schemas";
 
 export type { NavLink } from "@/lib/schemas";
@@ -35,3 +37,5 @@ export type ProductCard = z.infer<typeof ProductCardSchema>;
 export type ProductCategory = z.infer<typeof ProductCategorySchema>;
 export type GalleryImage = z.infer<typeof GalleryImageSchema>;
 export type AboutContent = z.infer<typeof AboutContentSchema>;
+export type ContactInfoCard = z.infer<typeof ContactInfoCardSchema>;
+export type ContactContent = z.infer<typeof ContactContentSchema>;

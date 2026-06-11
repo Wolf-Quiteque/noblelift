@@ -18,6 +18,7 @@ import { home as homeSeed } from "@/lib/content/home";
 import { products as productsSeed } from "@/lib/content/products";
 import { gallery as gallerySeed } from "@/lib/content/gallery";
 import { about as aboutSeed } from "@/lib/content/about";
+import { contact as contactSeed } from "@/lib/content/contact";
 
 import {
   SiteConfigSchema,
@@ -25,6 +26,7 @@ import {
   ProductsSchema,
   GallerySchema,
   AboutContentSchema,
+  ContactContentSchema,
   type ContentKey,
 } from "@/lib/schemas";
 import type {
@@ -33,6 +35,7 @@ import type {
   ProductCategory,
   GalleryImage,
   AboutContent,
+  ContactContent,
 } from "@/lib/types";
 
 export const contentTag = (key: ContentKey) => `content:${key}`;
@@ -90,4 +93,9 @@ export async function getGalleryImages(): Promise<GalleryImage[]> {
 export async function getAboutContent(): Promise<AboutContent> {
   const parsed = AboutContentSchema.safeParse(await fetchDoc("about"));
   return parsed.success ? parsed.data : aboutSeed;
+}
+
+export async function getContactContent(): Promise<ContactContent> {
+  const parsed = ContactContentSchema.safeParse(await fetchDoc("contact"));
+  return parsed.success ? parsed.data : contactSeed;
 }

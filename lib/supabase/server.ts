@@ -1,9 +1,20 @@
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 
+export function hasSupabaseConfig() {
+  return Boolean(
+    process.env.NEXT_PUBLIC_SUPABASE_URL &&
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  );
+}
+
 // Cookie-based Supabase client for Server Components, Server Actions and Route
 // Handlers. RLS applies based on the logged-in user's session.
 export async function createSupabaseServerClient() {
+  if (!hasSupabaseConfig()) {
+    throw new Error("Supabase is not configured.");
+  }
+
   const cookieStore = await cookies();
 
   return createServerClient(

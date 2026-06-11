@@ -1,7 +1,7 @@
 "use server";
 
 import { revalidateTag } from "next/cache";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { createSupabaseServerClient, hasSupabaseConfig } from "@/lib/supabase/server";
 import { contentSchemas, type ContentKey } from "@/lib/schemas";
 import { contentTag } from "@/lib/data";
 
@@ -10,6 +10,13 @@ export type SaveResult = { ok: true } | { ok: false; error: string };
 // Validates and upserts a content document, then revalidates the public pages
 // that depend on it. Called from the admin editors' save bar.
 export async function saveContent(key: ContentKey, input: unknown): Promise<SaveResult> {
+  if (!hasSupabaseConfig()) {
+    return {
+      ok: false,
+      error: "Supabase ainda nao esta configurado. Configure .env.local para publicar alteracoes.",
+    };
+  }
+
   const supabase = await createSupabaseServerClient();
 
   const {

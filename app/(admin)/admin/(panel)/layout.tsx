@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ExternalLink, LogOut } from "lucide-react";
 import Sidebar from "@/components/admin/Sidebar";
 import { signOut } from "@/lib/actions/auth";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { createSupabaseServerClient, hasSupabaseConfig } from "@/lib/supabase/server";
 
 // Authenticated admin shell: sidebar + topbar. Middleware already enforces auth;
 // this also reads the user for display.
@@ -11,10 +11,9 @@ export default async function PanelLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const supabase = await createSupabaseServerClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const user = hasSupabaseConfig()
+    ? (await (await createSupabaseServerClient()).auth.getUser()).data.user
+    : null;
 
   return (
     <div className="flex min-h-screen">
